@@ -35,7 +35,7 @@ rank = comm.rank
 size = comm.size
 
 # MAIN loop (minimal changes)
-for ref in range(8,N_ref+1):
+for ref in range(1,N_ref+1):
     # Initialize gmsh (use sys.argv so gmsh can see MPI args if needed)
     gmsh.initialize(sys.argv)
     gmsh.option.setNumber("General.Terminal", 0)
@@ -47,18 +47,18 @@ for ref in range(8,N_ref+1):
         # Parameters
         # --------------------------
         lc = 1.0 / (2**ref)          # requested mesh size
-        h = lc
+        h = lc*np.sqrt(2)
 
-        gmsh.option.setNumber("Mesh.MeshSizeMin", h)
-        gmsh.option.setNumber("Mesh.MeshSizeMax", h)
+        # gmsh.option.setNumber("Mesh.MeshSizeMin", h)
+        # gmsh.option.setNumber("Mesh.MeshSizeMax", h)
         gmsh.option.setNumber("Mesh.SaveAll", 1)   # <-- add this before meshing
         order = 1          # element order
 
         # --------------------------
         # 1. Structured grid parameters
         # --------------------------
-        nx = max(1, int(round(Lx / h)))
-        ny = max(1, int(round(Ly / h)))
+        nx = max(1, int(round(Lx / lc)))
+        ny = max(1, int(round(Ly / lc)))
         hx = Lx / nx
         hy = Ly / ny
 
@@ -104,18 +104,6 @@ for ref in range(8,N_ref+1):
 
                     pbar.update(1)
 
-        # --------------------------
-        # 4. Optional internal fracture line (same as before)
-        # --------------------------
-        if (x_start is not None) and (x_end is not None) and (y_start is not None) and (y_end is not None):
-            p5 = gmsh.model.occ.addPoint(x_start, y_start, 0)
-            p6 = gmsh.model.occ.addPoint(x_end, y_end, 0)
-            l_fract = gmsh.model.occ.addLine(p5, p6)
-            surf_tags = [(2, s) for s in triangle_surfaces]
-            gmsh.model.occ.fragment(surf_tags, [(1, l_fract)])
-        else:
-            l_fract = None
-
         # push rank-0 geometry into the model
         gmsh.model.occ.synchronize()
 
@@ -137,15 +125,21 @@ for ref in range(8,N_ref+1):
             pgB = gmsh.model.addPhysicalGroup(1, boundary_curves, 3)
             gmsh.model.setPhysicalName(1, pgB, "Boundary")
 
-        all_1d = [t for (d, t) in gmsh.model.getEntities(1)]
-        boundary_1d = set(gmsh.model.getEntitiesForPhysicalGroup(1, 3)) if boundary_curves else set()
-        gamma_curves = [t for t in all_1d if t not in boundary_1d]
-        if gamma_curves:
-            gmsh.model.addPhysicalGroup(1, gamma_curves, 2)
-            gmsh.model.setPhysicalName(1, 2, "Gamma")
-
         # ensure all geometry and physical groups are in the model on rank 0
         gmsh.model.occ.synchronize()
+
+        # --------------------------
+        # --- Minimal additions -----
+        # Force transfinite mesh: exactly endpoints only (no interior nodes)
+        # --------------------------
+        # Set each curve to have exactly 2 nodes (endpoints only)
+        for (dim, tag) in gmsh.model.getEntities(1):
+            gmsh.model.mesh.setTransfiniteCurve(tag, 2)
+
+        # Mark each surface transfinite (required when curves are transfinite)
+        for s in triangle_surfaces:
+            gmsh.model.mesh.setTransfiniteSurface(s)
+
 
     # --------------------------
     # 6. Minimal sync/parallel meshing steps (called on all ranks)
@@ -163,7 +157,7 @@ for ref in range(8,N_ref+1):
 
     # write mesh only from rank 0 (simple & safe)
     if rank == 0:
-        filename = f"mpi_diagonal_fracture_regular_{ref}.msh"
+        filename = f"regular_mesh_{ref}.msh"
         gmsh.write(filename)
 
     # finalize and synchronize ranks before next ref

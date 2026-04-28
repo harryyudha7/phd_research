@@ -15,7 +15,7 @@ L2_fem_list_pf, rL2s_fem_list_pf, H1s_list_pf, rH1s_list_pf = [], [], [], []
 L2_fem_list_lmbd, rL2s_fem_list_lmbd, H1s_list_lmbd, rH1s_list_lmbd = [], [], [], []
 
 plotter = pv.Plotter(shape=(2, 4), window_size=(2000, 1000))
-N_ref = 10
+N_ref = 3
 
 Lx, Ly = 1.0, 1.0
 y_start, y_end = 0.0, 1.0

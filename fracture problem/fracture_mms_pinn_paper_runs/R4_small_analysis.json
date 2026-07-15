@@ -1,0 +1,108 @@
+{
+  "metric": "flux_L2_vs_exact",
+  "cap_order": 0.5,
+  "threshold": 0.25,
+  "pairwise_local_slopes": [
+    {
+      "ref_left": 3,
+      "ref_right": 4,
+      "h_left": 0.125,
+      "h_right": 0.0625,
+      "slope": 0.9621230416748543
+    },
+    {
+      "ref_left": 4,
+      "ref_right": 5,
+      "h_left": 0.0625,
+      "h_right": 0.03125,
+      "slope": 0.4438625813966438
+    },
+    {
+      "ref_left": 5,
+      "ref_right": 6,
+      "h_left": 0.03125,
+      "h_right": 0.015625,
+      "slope": 0.3691691340141779
+    },
+    {
+      "ref_left": 6,
+      "ref_right": 7,
+      "h_left": 0.015625,
+      "h_right": 0.0078125,
+      "slope": 0.0393393778416802
+    }
+  ],
+  "plateau_detected": true,
+  "fit_refs": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "fit_h": [
+    0.125,
+    0.0625,
+    0.03125,
+    0.015625
+  ],
+  "pre_plateau_slope": 0.5769326852653673,
+  "plateau_refs": [
+    7
+  ],
+  "plateau_level": 0.02778854405924427,
+  "capacity_confirmation": {
+    "fit_metric": "flux_L2_vs_CG_targets_face",
+    "factor_threshold": 3.0,
+    "fit_residual_plateau_level": 0.027690426414571857,
+    "vs_exact_plateau_level": 0.02778854405924427,
+    "fit_to_exact_ratio": 0.9964691333067601,
+    "comparable_within_factor": true,
+    "fit_metric_pairwise_local_slopes": [
+      {
+        "ref_left": 3,
+        "ref_right": 4,
+        "h_left": 0.125,
+        "h_right": 0.0625,
+        "slope": 1.082917565443777
+      },
+      {
+        "ref_left": 4,
+        "ref_right": 5,
+        "h_left": 0.0625,
+        "h_right": 0.03125,
+        "slope": 0.607361403666038
+      },
+      {
+        "ref_left": 5,
+        "ref_right": 6,
+        "h_left": 0.03125,
+        "h_right": 0.015625,
+        "slope": 0.4852830587810151
+      },
+      {
+        "ref_left": 6,
+        "ref_right": 7,
+        "h_left": 0.015625,
+        "h_right": 0.0078125,
+        "slope": 0.30613479751904665
+      }
+    ],
+    "fit_metric_tail_pairs": [
+      {
+        "ref_left": 6,
+        "ref_right": 7,
+        "h_left": 0.015625,
+        "h_right": 0.0078125,
+        "slope": 0.30613479751904665
+      }
+    ],
+    "fit_metric_tail_median_slope": 0.30613479751904665,
+    "fit_metric_stalled_below_half_cap": false,
+    "capacity_limited": false
+  },
+  "trigger_decision": "plateau present, not capacity-limited",
+  "large_trigger": false,
+  "family": "R4",
+  "capacity": "SMALL",
+  "anchor_checks": {}
+}

@@ -180,3 +180,54 @@ Match `meta_T_final` to compare at the same physical time.
 > PDE/BCs but *different* fracture-coupling models (EDFM finite CI vs FEM exact
 > pressure continuity). Expect strong bulk agreement and trend-level (not
 > machine-level) agreement near Γ.
+
+## Companion file: `case3_mrst_export_noflow.mat` (no-flow fracture tips)
+
+Same problem and **identical field layout/names** as this file, with the **only**
+change being the fracture-tip BC: **no-flow (Neumann zero)** instead of Dirichlet
+`p_Γ(A)=1`, `p_Γ(B)=4`. Implemented by removing the tip wells, so the fracture ends are
+sealed. Differences to expect:
+
+| quantity | Dirichlet (`...export.mat`) | No-flow (`...export_noflow.mat`) |
+|---|---|---|
+| `meta_PVI` | 1.2 | **1.0** |
+| fracture pressure | spans 1→4 (pinned) | **floats ~2.5** (uniform) |
+| `tip_flux` | `[+28.09, −28.09]` | **`[0, 0]`** (sealed) |
+| `meta_Q_water` | 2.5032 | **3.4629** (fracture short-circuits matrix) |
+| `meta_T_final` | 0.47938 (PVI=1.2) | **0.28877** (PVI=1.0; `=1/Q_water`) |
+| `meta_nsteps` | 13384 | 2273 |
+| fracture `sw_frac` max | 0.2126 (oil conduit) | **0.7823** (floods with water) |
+| matrix `sw_matrix` max | 0.9955 | 0.9948 |
+| `meta_tip_bc` | (Dirichlet wells) | `'no-flow ... fracture pressure floats'` |
+
+> **PVI / time note:** the two files are at **different PVI** (Dirichlet 1.2, no-flow 1.0),
+> so `meta_T_final` differs accordingly. For the no-flow figure at PVI=1.0 the dimensionless
+> time is **`T = 0.28877`** (`= PVI·PV_matrix/Q_water = 1.0/3.4629`) — *not* 0.399 (that is the
+> Dirichlet `1/2.5032`). Use `meta_T_final` from each file.
+
+`sw_*` are again from MRST's independent `explicitTransport` (no-flow corroborated vs the
+hand-coded scheme to RMSE 9.0e-4 matrix / 2.1e-4 fracture). All fluxes (`face_flux`,
+`frac_face_flux`, `lam_*`) are from the no-flow pressure solve. Use `s_frac` as the
+arc-length coordinate and `sw_frac`/`sw_matrix` as saturations, exactly as above.
+
+## Companion file: `case3_mrst_export_nofrac.mat` (no fracture at all)
+
+Pure-matrix control case — **no fracture**, so no `s_frac`/`sw_frac`/`lam_*`/
+`frac_face_flux`/`tip_*`. The pressure is exactly linear, so `meta_Q_water = 3.0` and
+`PV_matrix = 1` ⇒ **PVI=1 → `T = 1/3 = 0.33333`**. **One file, one frozen flux, two
+saturation snapshots** (the flux is identical at both times, so a single export suffices):
+
+| field | shape | meaning |
+|---|---|---|
+| `sw_matrix_pvi05` | (16384,) | matrix Sw at `meta_T_pvi05 = 0.16667` (**PVI=0.5** — front clearly visible, Sw 0→0.986) |
+| `sw_matrix_t020` | (16384,) | matrix Sw at `meta_T_t020 = 0.20` (PVI=0.6) |
+| `sw_matrix_t1` | (16384,) | matrix Sw at `meta_T1 = 0.33333` (**PVI=1** — mostly swept) |
+| `sw_matrix_t2` | (16384,) | matrix Sw at `meta_T2 = 0.35` (PVI=1.05) |
+| `sw_matrix_*_matched` | (16384,) | hand-coded upwind for each time (corroborate to RMSE ~2.5e-4) |
+
+All `sw_matrix_*` are MRST `explicitTransport`. **For a figure showing the front, use
+`sw_matrix_pvi05`** (PVI=1 is past breakthrough and looks uniformly flooded).
+| `p_matrix`, `xc_matrix`, `face_*` | | pressure / cell centroids / matrix face geometry + `face_flux` (frozen) |
+
+`meta`: `T1=0.33333`, `T2=0.35`, `PVI1=1.0`, `PVI2=1.05`, `Q_water=3.0`, `PV_matrix=1.0`,
+`tip_bc='none (no fracture)'`. Matrix Sw max 0.9928 (T1) / 0.9931 (T2).

@@ -1,0 +1,204 @@
+{
+  "complete": true,
+  "family": "R1",
+  "capacity": "SMALL",
+  "frozen_protocol": {
+    "refs": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "seed": 1729,
+    "adam_steps": 2000,
+    "lbfgs_steps": 500,
+    "pointwise_grid": "48x48 shifted CG-target collocation"
+  },
+  "arms": {
+    "face_pointwise": {
+      "coarse_ref3_L2_vs_exact": 0.21169940784918068,
+      "fine_ref6_L2_vs_exact": 0.030792893463159953,
+      "fine_ref7_L2_vs_exact": 0.031162268801418595,
+      "runs": [
+        {
+          "ref": 3,
+          "h": 0.125,
+          "L2_vs_exact": 0.21169940784918068,
+          "face_RMSE_vs_CG": 0.016579023144868435,
+          "face_normalized_mse_vs_CG": 0.03200151228837691,
+          "pointwise_RMSE_vs_CG": 0.40975924611811915,
+          "pointwise_normalized_mse_vs_CG": 0.05379620409292309,
+          "R_xi_worst_max": 4.066191827689636e-15
+        },
+        {
+          "ref": 4,
+          "h": 0.0625,
+          "L2_vs_exact": 0.07969768478748307,
+          "face_RMSE_vs_CG": 0.0038108881417085196,
+          "face_normalized_mse_vs_CG": 0.007550500481255393,
+          "pointwise_RMSE_vs_CG": 0.1955229786833511,
+          "pointwise_normalized_mse_vs_CG": 0.011504106491766444,
+          "R_xi_worst_max": 2.2898349882893854e-16
+        },
+        {
+          "ref": 5,
+          "h": 0.03125,
+          "L2_vs_exact": 0.03692861192525696,
+          "face_RMSE_vs_CG": 0.0009395969057595846,
+          "face_normalized_mse_vs_CG": 0.0020659218506126915,
+          "pointwise_RMSE_vs_CG": 0.09681048417071018,
+          "pointwise_normalized_mse_vs_CG": 0.002775916258068898,
+          "R_xi_worst_max": 1.6653345369377348e-16
+        },
+        {
+          "ref": 6,
+          "h": 0.015625,
+          "L2_vs_exact": 0.030792893463159953,
+          "face_RMSE_vs_CG": 0.00023877224913557694,
+          "face_normalized_mse_vs_CG": 0.0005783402476505179,
+          "pointwise_RMSE_vs_CG": 0.05199017053961628,
+          "pointwise_normalized_mse_vs_CG": 0.000797075967521712,
+          "R_xi_worst_max": 1.7789589246142157e-15
+        },
+        {
+          "ref": 7,
+          "h": 0.0078125,
+          "L2_vs_exact": 0.031162268801418595,
+          "face_RMSE_vs_CG": 7.548612428484284e-05,
+          "face_normalized_mse_vs_CG": 0.0002422833610683592,
+          "pointwise_RMSE_vs_CG": 0.031948847549632946,
+          "pointwise_normalized_mse_vs_CG": 0.0003008285834453545,
+          "R_xi_worst_max": 2.2724877535296173e-16
+        }
+      ]
+    },
+    "face_only": {
+      "coarse_ref3_L2_vs_exact": 12.00214238594258,
+      "fine_ref6_L2_vs_exact": 0.031296321401818386,
+      "fine_ref7_L2_vs_exact": 0.03006025660087292,
+      "runs": [
+        {
+          "ref": 3,
+          "h": 0.125,
+          "L2_vs_exact": 12.00214238594258,
+          "face_RMSE_vs_CG": 0.014045935297068738,
+          "face_normalized_mse_vs_CG": 0.02296962756418818,
+          "pointwise_RMSE_vs_CG": 8.493813098224612,
+          "pointwise_normalized_mse_vs_CG": 23.115298656965322,
+          "R_xi_worst_max": 9.575673587391975e-16
+        },
+        {
+          "ref": 4,
+          "h": 0.0625,
+          "L2_vs_exact": 0.3442927995041692,
+          "face_RMSE_vs_CG": 0.0032894229796223994,
+          "face_normalized_mse_vs_CG": 0.0056255213960748575,
+          "pointwise_RMSE_vs_CG": 0.31058483494239336,
+          "pointwise_normalized_mse_vs_CG": 0.029028044248474865,
+          "R_xi_worst_max": 2.2898349882893854e-16
+        },
+        {
+          "ref": 5,
+          "h": 0.03125,
+          "L2_vs_exact": 0.04256529971397852,
+          "face_RMSE_vs_CG": 0.0009258292859652172,
+          "face_normalized_mse_vs_CG": 0.0020058227922461953,
+          "pointwise_RMSE_vs_CG": 0.10054174731794929,
+          "pointwise_normalized_mse_vs_CG": 0.00299401818185895,
+          "R_xi_worst_max": 1.6653345369377348e-16
+        },
+        {
+          "ref": 6,
+          "h": 0.015625,
+          "L2_vs_exact": 0.031296321401818386,
+          "face_RMSE_vs_CG": 0.0002366580742407544,
+          "face_normalized_mse_vs_CG": 0.0005681439265113942,
+          "pointwise_RMSE_vs_CG": 0.05389077347940193,
+          "pointwise_normalized_mse_vs_CG": 0.0008564185486768223,
+          "R_xi_worst_max": 9.141992718397773e-16
+        },
+        {
+          "ref": 7,
+          "h": 0.0078125,
+          "L2_vs_exact": 0.03006025660087292,
+          "face_RMSE_vs_CG": 7.331013566695922e-05,
+          "face_normalized_mse_vs_CG": 0.0002285164036625678,
+          "pointwise_RMSE_vs_CG": 0.03348944915325366,
+          "pointwise_normalized_mse_vs_CG": 0.00033054052531817193,
+          "R_xi_worst_max": 5.4860629927766524e-17
+        }
+      ]
+    },
+    "pointwise_only": {
+      "coarse_ref3_L2_vs_exact": 0.11857445768845501,
+      "fine_ref6_L2_vs_exact": 0.038907759885873944,
+      "fine_ref7_L2_vs_exact": 0.035355956212300255,
+      "runs": [
+        {
+          "ref": 3,
+          "h": 0.125,
+          "L2_vs_exact": 0.11857445768845501,
+          "face_RMSE_vs_CG": 0.02028907081649272,
+          "face_normalized_mse_vs_CG": 0.04792663553881923,
+          "pointwise_RMSE_vs_CG": 0.38789105912725935,
+          "pointwise_normalized_mse_vs_CG": 0.048207393095518504,
+          "R_xi_worst_max": 1.97758476261356e-15
+        },
+        {
+          "ref": 4,
+          "h": 0.0625,
+          "L2_vs_exact": 0.07903057683317345,
+          "face_RMSE_vs_CG": 0.004399861575589613,
+          "face_normalized_mse_vs_CG": 0.010064712260720091,
+          "pointwise_RMSE_vs_CG": 0.18863402221814318,
+          "pointwise_normalized_mse_vs_CG": 0.010707728084864287,
+          "R_xi_worst_max": 2.2898349882893854e-16
+        },
+        {
+          "ref": 5,
+          "h": 0.03125,
+          "L2_vs_exact": 0.04593862347722485,
+          "face_RMSE_vs_CG": 0.001000359351074395,
+          "face_normalized_mse_vs_CG": 0.002341762275949857,
+          "pointwise_RMSE_vs_CG": 0.09541913261855287,
+          "pointwise_normalized_mse_vs_CG": 0.002696699192060894,
+          "R_xi_worst_max": 1.6653345369377348e-16
+        },
+        {
+          "ref": 6,
+          "h": 0.015625,
+          "L2_vs_exact": 0.038907759885873944,
+          "face_RMSE_vs_CG": 0.00026527231147978174,
+          "face_normalized_mse_vs_CG": 0.0007138378293176271,
+          "pointwise_RMSE_vs_CG": 0.051117641587420805,
+          "pointwise_normalized_mse_vs_CG": 0.0007705464929236106,
+          "R_xi_worst_max": 2.194425197110661e-15
+        },
+        {
+          "ref": 7,
+          "h": 0.0078125,
+          "L2_vs_exact": 0.035355956212300255,
+          "face_RMSE_vs_CG": 8.379751937882506e-05,
+          "face_normalized_mse_vs_CG": 0.00029857377516963595,
+          "pointwise_RMSE_vs_CG": 0.030519930414248254,
+          "pointwise_normalized_mse_vs_CG": 0.0002745211331143753,
+          "R_xi_worst_max": 5.4860629927766524e-17
+        }
+      ]
+    }
+  },
+  "lowest_ref7_error_arm": "face_only",
+  "probe_6_large_diagnostic": {
+    "capacity": "LARGE",
+    "ref": 6,
+    "small_L2_vs_exact": 0.03129632140185585,
+    "large_L2_vs_exact": 0.04953807264361314,
+    "large_face_normalized_objective": 0.0007397247416174715,
+    "analysis_sentence": "Larger capacity fits the face data slightly worse and the exact solution substantially worse.",
+    "status": "all further LARGE runs cancelled"
+  },
+  "figure": "/home/muchamad/PhD/fenicsx/code/fracture problem/fracture_mms_pinn_paper_runs/fig_frac_R1_loss_ablation.png",
+  "csv": "/home/muchamad/PhD/fenicsx/code/fracture problem/fracture_mms_pinn_paper_runs/fracture_mms_pinn_sweep.csv",
+  "conservation_statement": "Loss choice affects accuracy only; the hard architecture retains machine-precision dual-volume conservation in all arms."
+}

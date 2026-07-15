@@ -1,0 +1,18 @@
+F5a NLR transport T=0.02: min=0.00000000e+00, max=9.61707298e-01, mass=2.00000000e-02
+F5a NLR transport T=0.05: min=0.00000000e+00, max=9.82879867e-01, mass=5.00000000e-02
+F5a NLR transport T=0.10: min=0.00000000e+00, max=9.90981498e-01, mass=9.96870920e-02
+F5 L2 T=0.05 CG vs NLR: 1.66742351e-02
+F5 L2 T=0.05 Frozen vs NLR: 3.19070082e-02
+F5 L2 T=0.05 Linear vs NLR: 2.65890151e-02
+F5 L2 T=0.05 PoU vs NLR: 2.07224572e-03
+F5 L2 T=0.10 CG vs NLR: 2.58955486e-02
+F5 L2 T=0.10 Frozen vs NLR: 3.43199564e-02
+F5 L2 T=0.10 Linear vs NLR: 3.84626798e-02
+F5 L2 T=0.10 PoU vs NLR: 2.05166498e-03
+F6 NLR flux-stage cost: 0.055000 s/update
+F6 PoU flux-stage cost: 0.028000 s/update
+F6 global linear flux-stage cost: 0.006600 s/update
+F6 PoU/NLR per-update speedup: 1.964286x
+F6 crossover iterations: 33333.333333
+F6 total at N=20000: NLR=1100.000000 s, PINN=1460.000000 s
+F6 total at N=50000: NLR=2750.000000 s, PINN=2300.000000 s

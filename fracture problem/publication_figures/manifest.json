@@ -1,0 +1,19 @@
+{
+  "figures": [
+    "fig_spe10_perm.png",
+    "fig_pinn_training.png",
+    "fig_conservation_maps.png",
+    "fig_frozen_saturation.png",
+    "fig_nlr_transport.png",
+    "fig_coupled_dS.png",
+    "fig_cost_crossover.png"
+  ],
+  "metrics": "figure_metrics.txt",
+  "static_cache": "static_frozen_transport_T010.npz",
+  "sources": {
+    "data_file": "case3_ecmor/case3_mrst_export_spe10_L20_64_wells.mat",
+    "mrst_dual_file": "case3_ecmor/case3_mrst_export_finep_dualT.mat",
+    "mrst_reference_file": "case3_ecmor/case3_mrst_export_spe10_ref_cvfem.mat",
+    "checkpoint": "case3_ecmor/hardcurl_pinn_spe10_Q1_64x64.pt"
+  }
+}

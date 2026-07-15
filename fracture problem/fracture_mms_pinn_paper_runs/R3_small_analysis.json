@@ -1,0 +1,127 @@
+{
+  "metric": "flux_L2_vs_exact",
+  "cap_order": 0.5,
+  "threshold": 0.25,
+  "pairwise_local_slopes": [
+    {
+      "ref_left": 3,
+      "ref_right": 4,
+      "h_left": 0.125,
+      "h_right": 0.0625,
+      "slope": 1.2067106357541446
+    },
+    {
+      "ref_left": 4,
+      "ref_right": 5,
+      "h_left": 0.0625,
+      "h_right": 0.03125,
+      "slope": 1.011600541134079
+    },
+    {
+      "ref_left": 5,
+      "ref_right": 6,
+      "h_left": 0.03125,
+      "h_right": 0.015625,
+      "slope": 0.5108909072533155
+    },
+    {
+      "ref_left": 6,
+      "ref_right": 7,
+      "h_left": 0.015625,
+      "h_right": 0.0078125,
+      "slope": 0.16246370751734804
+    }
+  ],
+  "plateau_detected": true,
+  "fit_refs": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "fit_h": [
+    0.125,
+    0.0625,
+    0.03125,
+    0.015625
+  ],
+  "pre_plateau_slope": 0.9199206793558692,
+  "plateau_refs": [
+    7
+  ],
+  "plateau_level": 0.03147297800135398,
+  "capacity_confirmation": {
+    "fit_metric": "flux_L2_vs_CG_targets_face",
+    "factor_threshold": 3.0,
+    "fit_residual_plateau_level": 0.029005284536431482,
+    "vs_exact_plateau_level": 0.03147297800135398,
+    "fit_to_exact_ratio": 0.9215932643928282,
+    "comparable_within_factor": true,
+    "fit_metric_pairwise_local_slopes": [
+      {
+        "ref_left": 3,
+        "ref_right": 4,
+        "h_left": 0.125,
+        "h_right": 0.0625,
+        "slope": 1.162931098818484
+      },
+      {
+        "ref_left": 4,
+        "ref_right": 5,
+        "h_left": 0.0625,
+        "h_right": 0.03125,
+        "slope": 0.9640809232798104
+      },
+      {
+        "ref_left": 5,
+        "ref_right": 6,
+        "h_left": 0.03125,
+        "h_right": 0.015625,
+        "slope": 0.8725602874789266
+      },
+      {
+        "ref_left": 6,
+        "ref_right": 7,
+        "h_left": 0.015625,
+        "h_right": 0.0078125,
+        "slope": 0.6231670498707101
+      }
+    ],
+    "fit_metric_tail_pairs": [
+      {
+        "ref_left": 6,
+        "ref_right": 7,
+        "h_left": 0.015625,
+        "h_right": 0.0078125,
+        "slope": 0.6231670498707101
+      }
+    ],
+    "fit_metric_tail_median_slope": 0.6231670498707101,
+    "fit_metric_stalled_below_half_cap": false,
+    "capacity_limited": false
+  },
+  "trigger_decision": "plateau present, not capacity-limited",
+  "large_trigger": false,
+  "family": "R3",
+  "capacity": "SMALL",
+  "anchor_checks": {
+    "lambda_finest_order": {
+      "value": 1.0293524253271686,
+      "anchor": 1.03,
+      "tolerance": 0.08,
+      "passed": true
+    },
+    "CG_finest_order": {
+      "value": 0.6281840335577343,
+      "anchor": 0.63,
+      "tolerance": 0.15,
+      "passed": true
+    },
+    "NLR_finest_order": {
+      "value": 0.6204041795288688,
+      "anchor": 0.63,
+      "tolerance": 0.15,
+      "passed": true
+    }
+  }
+}

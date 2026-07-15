@@ -1,0 +1,89 @@
+{
+  "target_times": [
+    0.01,
+    0.05,
+    0.1,
+    0.15,
+    0.25,
+    0.35,
+    0.5,
+    1.0,
+    1.5
+  ],
+  "target_steps": {
+    "464": 0.01,
+    "2320": 0.05,
+    "4641": 0.1,
+    "6961": 0.15,
+    "11602": 0.25,
+    "16243": 0.35
+  },
+  "dt": 2.1547939968228055e-05,
+  "dt_candidates": {
+    "CG": 2.1598853828576874e-05,
+    "NLR": 2.1547939968228055e-05,
+    "PINN": 2.1751228781879284e-05
+  },
+  "snapshots": {
+    "T0p01": {
+      "requested_time": 0.01,
+      "step": 464,
+      "time": 0.009998244145257818
+    },
+    "T0p05": {
+      "requested_time": 0.05,
+      "step": 2320,
+      "time": 0.04999122072628909
+    },
+    "T0p10": {
+      "requested_time": 0.1,
+      "step": 4641,
+      "time": 0.1000039893925464
+    },
+    "T0p15": {
+      "requested_time": 0.15,
+      "step": 6961,
+      "time": 0.1499952101188355
+    },
+    "T0p25": {
+      "requested_time": 0.25,
+      "step": 11602,
+      "time": 0.2499991995113819
+    },
+    "T0p35": {
+      "requested_time": 0.35,
+      "step": 16243,
+      "time": 0.3500031889039283
+    }
+  },
+  "watercut_at_snapshots": {
+    "CG": {
+      "T0p01": 0.0,
+      "T0p05": 0.0,
+      "T0p10": 0.0,
+      "T0p15": 0.0,
+      "T0p25": 0.0,
+      "T0p35": 0.0
+    },
+    "NLR": {
+      "T0p01": 0.0,
+      "T0p05": 0.0,
+      "T0p10": 0.0,
+      "T0p15": 0.0,
+      "T0p25": 0.0,
+      "T0p35": 0.0
+    },
+    "PINN": {
+      "T0p01": 0.0,
+      "T0p05": 0.0,
+      "T0p10": 0.0,
+      "T0p15": 0.0,
+      "T0p25": 0.0,
+      "T0p35": 0.0
+    }
+  },
+  "outputs": {
+    "npz": "/home/muchamad/PhD/fenicsx/code/fracture problem/result_y_fracture_spe10_case4/y_case4_requested_time_snapshots.npz"
+  },
+  "note": "No full-network training was rerun; this reuses y_case4_pinn_initial.pt and PoU refreshes during transport."
+}

@@ -1,0 +1,141 @@
+{
+  "metric": "flux_L2_vs_exact",
+  "cap_order": 2.0,
+  "threshold": 1.0,
+  "pairwise_local_slopes": [
+    {
+      "ref_left": 3,
+      "ref_right": 4,
+      "h_left": 0.125,
+      "h_right": 0.0625,
+      "slope": 1.6920485177997295
+    },
+    {
+      "ref_left": 4,
+      "ref_right": 5,
+      "h_left": 0.0625,
+      "h_right": 0.03125,
+      "slope": 0.027996405031440526
+    },
+    {
+      "ref_left": 5,
+      "ref_right": 6,
+      "h_left": 0.03125,
+      "h_right": 0.015625,
+      "slope": 0.051798294158735755
+    },
+    {
+      "ref_left": 6,
+      "ref_right": 7,
+      "h_left": 0.015625,
+      "h_right": 0.0078125,
+      "slope": -0.020382668854799228
+    }
+  ],
+  "plateau_detected": true,
+  "fit_refs": [
+    3,
+    4
+  ],
+  "fit_h": [
+    0.125,
+    0.0625
+  ],
+  "pre_plateau_slope": 1.692048517799729,
+  "plateau_refs": [
+    5,
+    6,
+    7
+  ],
+  "plateau_level": 0.031632534502854893,
+  "capacity_confirmation": {
+    "fit_metric": "flux_L2_vs_CG_targets_face",
+    "factor_threshold": 3.0,
+    "fit_residual_plateau_level": 0.01756135053169382,
+    "vs_exact_plateau_level": 0.031632534502854893,
+    "fit_to_exact_ratio": 0.555167355625863,
+    "comparable_within_factor": true,
+    "fit_metric_pairwise_local_slopes": [
+      {
+        "ref_left": 3,
+        "ref_right": 4,
+        "h_left": 0.125,
+        "h_right": 0.0625,
+        "slope": 0.6260836696541263
+      },
+      {
+        "ref_left": 4,
+        "ref_right": 5,
+        "h_left": 0.0625,
+        "h_right": 0.03125,
+        "slope": 0.04434133206332703
+      },
+      {
+        "ref_left": 5,
+        "ref_right": 6,
+        "h_left": 0.03125,
+        "h_right": 0.015625,
+        "slope": 0.08061685333975872
+      },
+      {
+        "ref_left": 6,
+        "ref_right": 7,
+        "h_left": 0.015625,
+        "h_right": 0.0078125,
+        "slope": 0.010573331628722727
+      }
+    ],
+    "fit_metric_tail_pairs": [
+      {
+        "ref_left": 4,
+        "ref_right": 5,
+        "h_left": 0.0625,
+        "h_right": 0.03125,
+        "slope": 0.04434133206332703
+      },
+      {
+        "ref_left": 5,
+        "ref_right": 6,
+        "h_left": 0.03125,
+        "h_right": 0.015625,
+        "slope": 0.08061685333975872
+      },
+      {
+        "ref_left": 6,
+        "ref_right": 7,
+        "h_left": 0.015625,
+        "h_right": 0.0078125,
+        "slope": 0.010573331628722727
+      }
+    ],
+    "fit_metric_tail_median_slope": 0.04434133206332703,
+    "fit_metric_stalled_below_half_cap": true,
+    "capacity_limited": true
+  },
+  "trigger_decision": "plateau present, capacity-limited",
+  "large_trigger": true,
+  "family": "R2",
+  "capacity": "SMALL",
+  "anchor_checks": {
+    "lambda_finest_order": {
+      "value": 2.0132314819685684,
+      "anchor": 2.01,
+      "tolerance": 0.04,
+      "passed": true
+    },
+    "CG_finest_order": {
+      "value": 2.002987435906029,
+      "anchor": 2.0,
+      "tolerance": 0.04,
+      "passed": true
+    },
+    "NLR_finest_order": {
+      "value": 2.0018474758052553,
+      "anchor": 2.0,
+      "tolerance": 0.04,
+      "passed": true
+    }
+  },
+  "large_execution": "cancelled_by_R1_ref6_probe6",
+  "large_cancellation_reason": "The w96,+frequency-16 model had face objective 7.40e-4 versus 5.68e-4 for SMALL and increased the exact-field L2 error from 3.13e-2 to 4.95e-2."
+}

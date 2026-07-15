@@ -1,0 +1,800 @@
+{
+  "analyses": {
+    "R1": {
+      "metric": "flux_L2_vs_exact",
+      "cap_order": 1.0,
+      "threshold": 0.5,
+      "pairwise_local_slopes": [
+        {
+          "ref_left": 3,
+          "ref_right": 4,
+          "h_left": 0.125,
+          "h_right": 0.0625,
+          "slope": 1.4170989483248209
+        },
+        {
+          "ref_left": 4,
+          "ref_right": 5,
+          "h_left": 0.0625,
+          "h_right": 0.03125,
+          "slope": 1.1518523770073297
+        },
+        {
+          "ref_left": 5,
+          "ref_right": 6,
+          "h_left": 0.03125,
+          "h_right": 0.015625,
+          "slope": 0.19994899369301797
+        },
+        {
+          "ref_left": 6,
+          "ref_right": 7,
+          "h_left": 0.015625,
+          "h_right": 0.0078125,
+          "slope": -0.029491975875160163
+        }
+      ],
+      "plateau_detected": true,
+      "fit_refs": [
+        3,
+        4,
+        5
+      ],
+      "fit_h": [
+        0.125,
+        0.0625,
+        0.03125
+      ],
+      "pre_plateau_slope": 1.2844756626660756,
+      "plateau_refs": [
+        6,
+        7
+      ],
+      "plateau_level": 0.031318460026166076,
+      "capacity_confirmation": {
+        "fit_metric": "flux_L2_vs_CG_targets_face",
+        "factor_threshold": 3.0,
+        "fit_residual_plateau_level": 0.03084432754534803,
+        "vs_exact_plateau_level": 0.031318460026166076,
+        "fit_to_exact_ratio": 0.9848609260984762,
+        "comparable_within_factor": true,
+        "fit_metric_pairwise_local_slopes": [
+          {
+            "ref_left": 3,
+            "ref_right": 4,
+            "h_left": 0.125,
+            "h_right": 0.0625,
+            "slope": 1.1744853604767742
+          },
+          {
+            "ref_left": 4,
+            "ref_right": 5,
+            "h_left": 0.0625,
+            "h_right": 0.03125,
+            "slope": 1.0560599971694997
+          },
+          {
+            "ref_left": 5,
+            "ref_right": 6,
+            "h_left": 0.03125,
+            "h_right": 0.015625,
+            "slope": 0.9826262501298049
+          },
+          {
+            "ref_left": 6,
+            "ref_right": 7,
+            "h_left": 0.015625,
+            "h_right": 0.0078125,
+            "slope": 0.6680306742646822
+          }
+        ],
+        "fit_metric_tail_pairs": [
+          {
+            "ref_left": 5,
+            "ref_right": 6,
+            "h_left": 0.03125,
+            "h_right": 0.015625,
+            "slope": 0.9826262501298049
+          },
+          {
+            "ref_left": 6,
+            "ref_right": 7,
+            "h_left": 0.015625,
+            "h_right": 0.0078125,
+            "slope": 0.6680306742646822
+          }
+        ],
+        "fit_metric_tail_median_slope": 0.8253284621972435,
+        "fit_metric_stalled_below_half_cap": false,
+        "capacity_limited": false
+      },
+      "trigger_decision": "plateau present, not capacity-limited",
+      "large_trigger": false,
+      "family": "R1",
+      "capacity": "SMALL",
+      "anchor_checks": {
+        "lambda_finest_order": {
+          "value": 1.0046769253009042,
+          "anchor": 1.0,
+          "tolerance": 0.03,
+          "passed": true
+        },
+        "CG_finest_order": {
+          "value": 0.9999860507595664,
+          "anchor": 1.0,
+          "tolerance": 0.03,
+          "passed": true
+        },
+        "NLR_finest_order": {
+          "value": 0.9998396403636365,
+          "anchor": 1.0,
+          "tolerance": 0.03,
+          "passed": true
+        },
+        "CG_finest_value": {
+          "value": 0.03510343471985616,
+          "anchor": 0.0351,
+          "tolerance": 0.0007,
+          "passed": true
+        },
+        "NLR_finest_value": {
+          "value": 0.0351022464558728,
+          "anchor": 0.0351,
+          "tolerance": 0.0007,
+          "passed": true
+        },
+        "lambda_finest_value": {
+          "value": 0.023857626921946765,
+          "anchor": 0.0239,
+          "tolerance": 0.0008,
+          "passed": true
+        }
+      }
+    },
+    "R2": {
+      "metric": "flux_L2_vs_exact",
+      "cap_order": 2.0,
+      "threshold": 1.0,
+      "pairwise_local_slopes": [
+        {
+          "ref_left": 3,
+          "ref_right": 4,
+          "h_left": 0.125,
+          "h_right": 0.0625,
+          "slope": 0.4518114459247141
+        },
+        {
+          "ref_left": 4,
+          "ref_right": 5,
+          "h_left": 0.0625,
+          "h_right": 0.03125,
+          "slope": 0.44145068343205063
+        },
+        {
+          "ref_left": 5,
+          "ref_right": 6,
+          "h_left": 0.03125,
+          "h_right": 0.015625,
+          "slope": 0.38126350948729276
+        },
+        {
+          "ref_left": 6,
+          "ref_right": 7,
+          "h_left": 0.015625,
+          "h_right": 0.0078125,
+          "slope": 0.3756477822043655
+        }
+      ],
+      "plateau_detected": true,
+      "fit_refs": [
+        3
+      ],
+      "fit_h": [
+        0.125
+      ],
+      "pre_plateau_slope": null,
+      "plateau_refs": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "plateau_level": 0.0715177424894573,
+      "capacity_confirmation": {
+        "fit_metric": "flux_L2_vs_CG_targets_face",
+        "factor_threshold": 3.0,
+        "fit_residual_plateau_level": 0.01819239241825894,
+        "vs_exact_plateau_level": 0.0715177424894573,
+        "fit_to_exact_ratio": 0.2543759322512277,
+        "comparable_within_factor": false,
+        "fit_metric_pairwise_local_slopes": [
+          {
+            "ref_left": 3,
+            "ref_right": 4,
+            "h_left": 0.125,
+            "h_right": 0.0625,
+            "slope": 0.7023624342995625
+          },
+          {
+            "ref_left": 4,
+            "ref_right": 5,
+            "h_left": 0.0625,
+            "h_right": 0.03125,
+            "slope": 0.09860247292290773
+          },
+          {
+            "ref_left": 5,
+            "ref_right": 6,
+            "h_left": 0.03125,
+            "h_right": 0.015625,
+            "slope": -0.06909441898335934
+          },
+          {
+            "ref_left": 6,
+            "ref_right": 7,
+            "h_left": 0.015625,
+            "h_right": 0.0078125,
+            "slope": 0.13598465979301647
+          }
+        ],
+        "fit_metric_tail_pairs": [
+          {
+            "ref_left": 3,
+            "ref_right": 4,
+            "h_left": 0.125,
+            "h_right": 0.0625,
+            "slope": 0.7023624342995625
+          },
+          {
+            "ref_left": 4,
+            "ref_right": 5,
+            "h_left": 0.0625,
+            "h_right": 0.03125,
+            "slope": 0.09860247292290773
+          },
+          {
+            "ref_left": 5,
+            "ref_right": 6,
+            "h_left": 0.03125,
+            "h_right": 0.015625,
+            "slope": -0.06909441898335934
+          },
+          {
+            "ref_left": 6,
+            "ref_right": 7,
+            "h_left": 0.015625,
+            "h_right": 0.0078125,
+            "slope": 0.13598465979301647
+          }
+        ],
+        "fit_metric_tail_median_slope": 0.11729356635796209,
+        "fit_metric_stalled_below_half_cap": true,
+        "capacity_limited": false
+      },
+      "trigger_decision": "plateau present, not capacity-limited",
+      "large_trigger": false,
+      "family": "R2",
+      "capacity": "SMALL",
+      "anchor_checks": {
+        "lambda_finest_order": {
+          "value": 2.0132314819685675,
+          "anchor": 2.01,
+          "tolerance": 0.04,
+          "passed": true
+        },
+        "CG_finest_order": {
+          "value": 2.0029874359060127,
+          "anchor": 2.0,
+          "tolerance": 0.04,
+          "passed": true
+        },
+        "NLR_finest_order": {
+          "value": 2.0018474758051954,
+          "anchor": 2.0,
+          "tolerance": 0.04,
+          "passed": true
+        }
+      }
+    },
+    "R3": {
+      "metric": "flux_L2_vs_exact",
+      "cap_order": 0.5,
+      "threshold": 0.25,
+      "pairwise_local_slopes": [
+        {
+          "ref_left": 3,
+          "ref_right": 4,
+          "h_left": 0.125,
+          "h_right": 0.0625,
+          "slope": 1.2067106357541446
+        },
+        {
+          "ref_left": 4,
+          "ref_right": 5,
+          "h_left": 0.0625,
+          "h_right": 0.03125,
+          "slope": 1.011600541134079
+        },
+        {
+          "ref_left": 5,
+          "ref_right": 6,
+          "h_left": 0.03125,
+          "h_right": 0.015625,
+          "slope": 0.5108909072533155
+        },
+        {
+          "ref_left": 6,
+          "ref_right": 7,
+          "h_left": 0.015625,
+          "h_right": 0.0078125,
+          "slope": 0.16246370751734804
+        }
+      ],
+      "plateau_detected": true,
+      "fit_refs": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fit_h": [
+        0.125,
+        0.0625,
+        0.03125,
+        0.015625
+      ],
+      "pre_plateau_slope": 0.9199206793558692,
+      "plateau_refs": [
+        7
+      ],
+      "plateau_level": 0.03147297800135398,
+      "capacity_confirmation": {
+        "fit_metric": "flux_L2_vs_CG_targets_face",
+        "factor_threshold": 3.0,
+        "fit_residual_plateau_level": 0.029005284536431482,
+        "vs_exact_plateau_level": 0.03147297800135398,
+        "fit_to_exact_ratio": 0.9215932643928282,
+        "comparable_within_factor": true,
+        "fit_metric_pairwise_local_slopes": [
+          {
+            "ref_left": 3,
+            "ref_right": 4,
+            "h_left": 0.125,
+            "h_right": 0.0625,
+            "slope": 1.162931098818484
+          },
+          {
+            "ref_left": 4,
+            "ref_right": 5,
+            "h_left": 0.0625,
+            "h_right": 0.03125,
+            "slope": 0.9640809232798104
+          },
+          {
+            "ref_left": 5,
+            "ref_right": 6,
+            "h_left": 0.03125,
+            "h_right": 0.015625,
+            "slope": 0.8725602874789266
+          },
+          {
+            "ref_left": 6,
+            "ref_right": 7,
+            "h_left": 0.015625,
+            "h_right": 0.0078125,
+            "slope": 0.6231670498707101
+          }
+        ],
+        "fit_metric_tail_pairs": [
+          {
+            "ref_left": 6,
+            "ref_right": 7,
+            "h_left": 0.015625,
+            "h_right": 0.0078125,
+            "slope": 0.6231670498707101
+          }
+        ],
+        "fit_metric_tail_median_slope": 0.6231670498707101,
+        "fit_metric_stalled_below_half_cap": false,
+        "capacity_limited": false
+      },
+      "trigger_decision": "plateau present, not capacity-limited",
+      "large_trigger": false,
+      "family": "R3",
+      "capacity": "SMALL",
+      "anchor_checks": {
+        "lambda_finest_order": {
+          "value": 1.0293524253271686,
+          "anchor": 1.03,
+          "tolerance": 0.08,
+          "passed": true
+        },
+        "CG_finest_order": {
+          "value": 0.6281840335577343,
+          "anchor": 0.63,
+          "tolerance": 0.15,
+          "passed": true
+        },
+        "NLR_finest_order": {
+          "value": 0.6204041795288688,
+          "anchor": 0.63,
+          "tolerance": 0.15,
+          "passed": true
+        }
+      }
+    },
+    "R4": {
+      "metric": "flux_L2_vs_exact",
+      "cap_order": 0.5,
+      "threshold": 0.25,
+      "pairwise_local_slopes": [
+        {
+          "ref_left": 3,
+          "ref_right": 4,
+          "h_left": 0.125,
+          "h_right": 0.0625,
+          "slope": 0.9621230416748543
+        },
+        {
+          "ref_left": 4,
+          "ref_right": 5,
+          "h_left": 0.0625,
+          "h_right": 0.03125,
+          "slope": 0.4438625813966438
+        },
+        {
+          "ref_left": 5,
+          "ref_right": 6,
+          "h_left": 0.03125,
+          "h_right": 0.015625,
+          "slope": 0.3691691340141779
+        },
+        {
+          "ref_left": 6,
+          "ref_right": 7,
+          "h_left": 0.015625,
+          "h_right": 0.0078125,
+          "slope": 0.0393393778416802
+        }
+      ],
+      "plateau_detected": true,
+      "fit_refs": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "fit_h": [
+        0.125,
+        0.0625,
+        0.03125,
+        0.015625
+      ],
+      "pre_plateau_slope": 0.5769326852653673,
+      "plateau_refs": [
+        7
+      ],
+      "plateau_level": 0.02778854405924427,
+      "capacity_confirmation": {
+        "fit_metric": "flux_L2_vs_CG_targets_face",
+        "factor_threshold": 3.0,
+        "fit_residual_plateau_level": 0.027690426414571857,
+        "vs_exact_plateau_level": 0.02778854405924427,
+        "fit_to_exact_ratio": 0.9964691333067601,
+        "comparable_within_factor": true,
+        "fit_metric_pairwise_local_slopes": [
+          {
+            "ref_left": 3,
+            "ref_right": 4,
+            "h_left": 0.125,
+            "h_right": 0.0625,
+            "slope": 1.082917565443777
+          },
+          {
+            "ref_left": 4,
+            "ref_right": 5,
+            "h_left": 0.0625,
+            "h_right": 0.03125,
+            "slope": 0.607361403666038
+          },
+          {
+            "ref_left": 5,
+            "ref_right": 6,
+            "h_left": 0.03125,
+            "h_right": 0.015625,
+            "slope": 0.4852830587810151
+          },
+          {
+            "ref_left": 6,
+            "ref_right": 7,
+            "h_left": 0.015625,
+            "h_right": 0.0078125,
+            "slope": 0.30613479751904665
+          }
+        ],
+        "fit_metric_tail_pairs": [
+          {
+            "ref_left": 6,
+            "ref_right": 7,
+            "h_left": 0.015625,
+            "h_right": 0.0078125,
+            "slope": 0.30613479751904665
+          }
+        ],
+        "fit_metric_tail_median_slope": 0.30613479751904665,
+        "fit_metric_stalled_below_half_cap": false,
+        "capacity_limited": false
+      },
+      "trigger_decision": "plateau present, not capacity-limited",
+      "large_trigger": false,
+      "family": "R4",
+      "capacity": "SMALL",
+      "anchor_checks": {}
+    }
+  },
+  "fixedmesh": {
+    "family": "R1",
+    "ref": 6,
+    "h": 0.015625,
+    "R_tau_native": {
+      "lambda_h_RHS": {
+        "n": 8192,
+        "max": 1.7664905996306324e-15,
+        "rmse": 3.614911306329363e-17,
+        "mean_abs": 2.017836587175891e-17
+      },
+      "exact_lambda_RHS": {
+        "n": 8192,
+        "max": 0.0005679805741897349,
+        "rmse": 4.821703110965438e-05,
+        "mean_abs": 5.421058259150867e-06
+      }
+    },
+    "R_xi": {
+      "lambda_h_RHS": {
+        "n": 4225,
+        "max": 1.7683337433238577e-15,
+        "rmse": 5.114633428301086e-17,
+        "mean_abs": 1.42357772111985e-17
+      },
+      "exact_lambda_RHS": {
+        "n": 4225,
+        "max": 0.00012465577880576423,
+        "rmse": 7.6107445133641325e-06,
+        "mean_abs": 8.013578621729301e-07
+      },
+      "cut_exact_lambda_RHS": {
+        "n": 63,
+        "max": 0.00012465577880576423,
+        "rmse": 6.191715122175248e-05,
+        "mean_abs": 5.2471760894435064e-05
+      },
+      "by_class": {
+        "lambda_h": {
+          "interior-away": {
+            "n": 3906,
+            "max": 1.7683337433238577e-15,
+            "rmse": 5.299239658167436e-17,
+            "mean_abs": 1.4623777054137103e-17
+          },
+          "fracture-cut": {
+            "n": 63,
+            "max": 4.85722573273506e-17,
+            "rmse": 1.670373426920422e-17,
+            "mean_abs": 1.2061749168901237e-17
+          },
+          "fracture-adjacent": {
+            "n": 0,
+            "max": NaN,
+            "rmse": NaN,
+            "mean_abs": NaN
+          },
+          "boundary": {
+            "n": 256,
+            "max": 7.589415207398531e-17,
+            "rmse": 1.6055831155633474e-17,
+            "mean_abs": 8.850763071145942e-18
+          },
+          "source": {
+            "n": 0,
+            "max": NaN,
+            "rmse": NaN,
+            "mean_abs": NaN
+          }
+        },
+        "exact_lambda": {
+          "interior-away": {
+            "n": 3906,
+            "max": 1.7683337433238577e-15,
+            "rmse": 5.299239658167436e-17,
+            "mean_abs": 1.4623777054137103e-17
+          },
+          "fracture-cut": {
+            "n": 63,
+            "max": 0.00012465577880576423,
+            "rmse": 6.191715122175248e-05,
+            "mean_abs": 5.2471760894435064e-05
+          },
+          "fracture-adjacent": {
+            "n": 0,
+            "max": NaN,
+            "rmse": NaN,
+            "mean_abs": NaN
+          },
+          "boundary": {
+            "n": 256,
+            "max": 4.000801563654945e-05,
+            "rmse": 3.5362423947470674e-06,
+            "mean_abs": 3.125626221644556e-07
+          },
+          "source": {
+            "n": 0,
+            "max": NaN,
+            "rmse": NaN,
+            "mean_abs": NaN
+          }
+        }
+      }
+    },
+    "PINN_R_xi_class_gates": {
+      "interior-away": {
+        "status": "gated",
+        "passed": true,
+        "tolerance": 1e-12,
+        "max": 1.7683337433238577e-15
+      },
+      "fracture-cut": {
+        "status": "gated",
+        "passed": true,
+        "tolerance": 1e-12,
+        "max": 4.85722573273506e-17
+      },
+      "fracture-adjacent": {
+        "status": "N/A",
+        "passed": true,
+        "tolerance": null
+      },
+      "boundary": {
+        "status": "gated",
+        "passed": true,
+        "tolerance": 1e-12,
+        "max": 7.589415207398531e-17
+      },
+      "source": {
+        "status": "N/A",
+        "passed": true,
+        "tolerance": null
+      }
+    },
+    "max_R_xi_lambda_h_RHS_over_completed_sweep": 3.1710745140856034e-15,
+    "CG_NLR_new_audit": {
+      "measured": {
+        "CG_R_tau_mean": 0.001629393742506893,
+        "CG_R_tau_max": 0.019688050734356054,
+        "NLR_R_tau_mean": 0.001629393742506893,
+        "NLR_R_tau_max": 0.01968805073435605,
+        "CG_R_xi_mean": 6.500969352237733e-05,
+        "CG_R_xi_max": 0.002454709136907276,
+        "NLR_R_xi_mean": 6.433932247734276e-05,
+        "NLR_R_xi_max": 0.0024528840750602295,
+        "CG_R_xi_by_class": {
+          "interior-away": {
+            "n": 3906,
+            "max": 1.0987771104772545e-06,
+            "rmse": 7.07832586396298e-07,
+            "mean_abs": 6.295999377654132e-07
+          },
+          "fracture-cut": {
+            "n": 63,
+            "max": 7.022179243434956e-06,
+            "rmse": 5.793706107130067e-06,
+            "mean_abs": 5.718770364954934e-06
+          },
+          "fracture-adjacent": {
+            "n": 0,
+            "max": NaN,
+            "rmse": NaN,
+            "mean_abs": NaN
+          },
+          "boundary": {
+            "n": 256,
+            "max": 0.002454709136907276,
+            "rmse": 0.0012261292279790968,
+            "mean_abs": 0.0010619002157896107
+          }
+        },
+        "NLR_R_xi_by_class": {
+          "interior-away": {
+            "n": 3906,
+            "max": 4.125172425872847e-15,
+            "rmse": 1.6091770482775528e-15,
+            "mean_abs": 1.392227489766654e-15
+          },
+          "fracture-cut": {
+            "n": 63,
+            "max": 4.635070105507566e-12,
+            "rmse": 1.0254623712956598e-12,
+            "mean_abs": 5.512810114090624e-13
+          },
+          "fracture-adjacent": {
+            "n": 0,
+            "max": NaN,
+            "rmse": NaN,
+            "mean_abs": NaN
+          },
+          "boundary": {
+            "n": 256,
+            "max": 0.0024528840750602295,
+            "rmse": 0.0012260580961205995,
+            "mean_abs": 0.0010618501461976734
+          }
+        }
+      },
+      "formulae": {
+        "R_xi": "scatter(dual_face_flux)-integral_CV(f)-node_split_integral_Gamma(lambda_h)",
+        "R_tau": "integral_boundary(q.n)-integral_cell(f)-attributed_integral_Gamma(lambda_h)",
+        "conforming_lambda_attribution": "one half to each fracture-edge element",
+        "nonconforming_lambda_attribution": "full integral on each cut element",
+        "k1_flux_independence": "For cellwise-constant P1 flux, the closed-boundary flux integral vanishes identically; CG and NLR R_tau therefore coincide."
+      },
+      "legacy_anchors": {
+        "status": "retired",
+        "reason": "undocumented legacy residual convention; replaced by Gate-A1-consistent audit"
+      },
+      "NLR_R_xi_class_gates": {
+        "interior-away": {
+          "status": "gated",
+          "passed": true,
+          "tolerance": 1e-12,
+          "max": 4.125172425872847e-15
+        },
+        "fracture-cut": {
+          "status": "gated",
+          "passed": true,
+          "tolerance": 1e-11,
+          "max": 4.635070105507566e-12
+        },
+        "fracture-adjacent": {
+          "status": "N/A",
+          "passed": true,
+          "tolerance": null
+        },
+        "boundary": {
+          "status": "reported separately; ungated",
+          "passed": true,
+          "tolerance": null,
+          "max": 0.0024528840750602295
+        }
+      },
+      "R_tau_CG_NLR_identical": true
+    },
+    "quadrature": {
+      "element_order": 10,
+      "face_order": 32,
+      "source_order": 20,
+      "line_order": 12
+    }
+  },
+  "jump_figure_metadata": {
+    "panels": {
+      "R1": {
+        "sampling": "tagged fracture-facet midpoints",
+        "delta": null
+      },
+      "R3": {
+        "accepted_delta": 2e-06,
+        "checks": [
+          {
+            "delta": 1e-06,
+            "double_delta": 2e-06,
+            "max_jump_change": 4.710277376051325e-16,
+            "tolerance": 1.3149337800082542e-06
+          }
+        ],
+        "sampling": "independent multiplier-interval midpoints"
+      }
+    },
+    "PINN_jump_max_error_vs_lambda_h": 0.0
+  },
+  "R4_status": "run"
+}

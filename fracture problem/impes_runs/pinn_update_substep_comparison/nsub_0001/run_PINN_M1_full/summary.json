@@ -1,0 +1,7 @@
+{
+  "n_steps": 5,
+  "max_CFL": 0.21870152719587832,
+  "n_cfl_violations": 0,
+  "first_cfl_violation_step": null,
+  "polluted_from_step": null
+}

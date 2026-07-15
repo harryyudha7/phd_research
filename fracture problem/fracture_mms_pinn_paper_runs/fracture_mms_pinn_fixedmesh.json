@@ -1,0 +1,243 @@
+{
+  "family": "R1",
+  "ref": 6,
+  "h": 0.015625,
+  "R_tau_native": {
+    "lambda_h_RHS": {
+      "n": 8192,
+      "max": 1.7664905996306324e-15,
+      "rmse": 3.614911306329363e-17,
+      "mean_abs": 2.017836587175891e-17
+    },
+    "exact_lambda_RHS": {
+      "n": 8192,
+      "max": 0.0005679805741897349,
+      "rmse": 4.821703110965438e-05,
+      "mean_abs": 5.421058259150867e-06
+    }
+  },
+  "R_xi": {
+    "lambda_h_RHS": {
+      "n": 4225,
+      "max": 1.7683337433238577e-15,
+      "rmse": 5.114633428301086e-17,
+      "mean_abs": 1.42357772111985e-17
+    },
+    "exact_lambda_RHS": {
+      "n": 4225,
+      "max": 0.00012465577880576423,
+      "rmse": 7.6107445133641325e-06,
+      "mean_abs": 8.013578621729301e-07
+    },
+    "cut_exact_lambda_RHS": {
+      "n": 63,
+      "max": 0.00012465577880576423,
+      "rmse": 6.191715122175248e-05,
+      "mean_abs": 5.2471760894435064e-05
+    },
+    "by_class": {
+      "lambda_h": {
+        "interior-away": {
+          "n": 3906,
+          "max": 1.7683337433238577e-15,
+          "rmse": 5.299239658167436e-17,
+          "mean_abs": 1.4623777054137103e-17
+        },
+        "fracture-cut": {
+          "n": 63,
+          "max": 4.85722573273506e-17,
+          "rmse": 1.670373426920422e-17,
+          "mean_abs": 1.2061749168901237e-17
+        },
+        "fracture-adjacent": {
+          "n": 0,
+          "max": NaN,
+          "rmse": NaN,
+          "mean_abs": NaN
+        },
+        "boundary": {
+          "n": 256,
+          "max": 7.589415207398531e-17,
+          "rmse": 1.6055831155633474e-17,
+          "mean_abs": 8.850763071145942e-18
+        },
+        "source": {
+          "n": 0,
+          "max": NaN,
+          "rmse": NaN,
+          "mean_abs": NaN
+        }
+      },
+      "exact_lambda": {
+        "interior-away": {
+          "n": 3906,
+          "max": 1.7683337433238577e-15,
+          "rmse": 5.299239658167436e-17,
+          "mean_abs": 1.4623777054137103e-17
+        },
+        "fracture-cut": {
+          "n": 63,
+          "max": 0.00012465577880576423,
+          "rmse": 6.191715122175248e-05,
+          "mean_abs": 5.2471760894435064e-05
+        },
+        "fracture-adjacent": {
+          "n": 0,
+          "max": NaN,
+          "rmse": NaN,
+          "mean_abs": NaN
+        },
+        "boundary": {
+          "n": 256,
+          "max": 4.000801563654945e-05,
+          "rmse": 3.5362423947470674e-06,
+          "mean_abs": 3.125626221644556e-07
+        },
+        "source": {
+          "n": 0,
+          "max": NaN,
+          "rmse": NaN,
+          "mean_abs": NaN
+        }
+      }
+    }
+  },
+  "PINN_R_xi_class_gates": {
+    "interior-away": {
+      "status": "gated",
+      "passed": true,
+      "tolerance": 1e-12,
+      "max": 1.7683337433238577e-15
+    },
+    "fracture-cut": {
+      "status": "gated",
+      "passed": true,
+      "tolerance": 1e-12,
+      "max": 4.85722573273506e-17
+    },
+    "fracture-adjacent": {
+      "status": "N/A",
+      "passed": true,
+      "tolerance": null
+    },
+    "boundary": {
+      "status": "gated",
+      "passed": true,
+      "tolerance": 1e-12,
+      "max": 7.589415207398531e-17
+    },
+    "source": {
+      "status": "N/A",
+      "passed": true,
+      "tolerance": null
+    }
+  },
+  "max_R_xi_lambda_h_RHS_over_completed_sweep": 3.1710745140856034e-15,
+  "CG_NLR_new_audit": {
+    "measured": {
+      "CG_R_tau_mean": 0.001629393742506893,
+      "CG_R_tau_max": 0.019688050734356054,
+      "NLR_R_tau_mean": 0.001629393742506893,
+      "NLR_R_tau_max": 0.01968805073435605,
+      "CG_R_xi_mean": 6.500969352237733e-05,
+      "CG_R_xi_max": 0.002454709136907276,
+      "NLR_R_xi_mean": 6.433932247734276e-05,
+      "NLR_R_xi_max": 0.0024528840750602295,
+      "CG_R_xi_by_class": {
+        "interior-away": {
+          "n": 3906,
+          "max": 1.0987771104772545e-06,
+          "rmse": 7.07832586396298e-07,
+          "mean_abs": 6.295999377654132e-07
+        },
+        "fracture-cut": {
+          "n": 63,
+          "max": 7.022179243434956e-06,
+          "rmse": 5.793706107130067e-06,
+          "mean_abs": 5.718770364954934e-06
+        },
+        "fracture-adjacent": {
+          "n": 0,
+          "max": NaN,
+          "rmse": NaN,
+          "mean_abs": NaN
+        },
+        "boundary": {
+          "n": 256,
+          "max": 0.002454709136907276,
+          "rmse": 0.0012261292279790968,
+          "mean_abs": 0.0010619002157896107
+        }
+      },
+      "NLR_R_xi_by_class": {
+        "interior-away": {
+          "n": 3906,
+          "max": 4.125172425872847e-15,
+          "rmse": 1.6091770482775528e-15,
+          "mean_abs": 1.392227489766654e-15
+        },
+        "fracture-cut": {
+          "n": 63,
+          "max": 4.635070105507566e-12,
+          "rmse": 1.0254623712956598e-12,
+          "mean_abs": 5.512810114090624e-13
+        },
+        "fracture-adjacent": {
+          "n": 0,
+          "max": NaN,
+          "rmse": NaN,
+          "mean_abs": NaN
+        },
+        "boundary": {
+          "n": 256,
+          "max": 0.0024528840750602295,
+          "rmse": 0.0012260580961205995,
+          "mean_abs": 0.0010618501461976734
+        }
+      }
+    },
+    "formulae": {
+      "R_xi": "scatter(dual_face_flux)-integral_CV(f)-node_split_integral_Gamma(lambda_h)",
+      "R_tau": "integral_boundary(q.n)-integral_cell(f)-attributed_integral_Gamma(lambda_h)",
+      "conforming_lambda_attribution": "one half to each fracture-edge element",
+      "nonconforming_lambda_attribution": "full integral on each cut element",
+      "k1_flux_independence": "For cellwise-constant P1 flux, the closed-boundary flux integral vanishes identically; CG and NLR R_tau therefore coincide."
+    },
+    "legacy_anchors": {
+      "status": "retired",
+      "reason": "undocumented legacy residual convention; replaced by Gate-A1-consistent audit"
+    },
+    "NLR_R_xi_class_gates": {
+      "interior-away": {
+        "status": "gated",
+        "passed": true,
+        "tolerance": 1e-12,
+        "max": 4.125172425872847e-15
+      },
+      "fracture-cut": {
+        "status": "gated",
+        "passed": true,
+        "tolerance": 1e-11,
+        "max": 4.635070105507566e-12
+      },
+      "fracture-adjacent": {
+        "status": "N/A",
+        "passed": true,
+        "tolerance": null
+      },
+      "boundary": {
+        "status": "reported separately; ungated",
+        "passed": true,
+        "tolerance": null,
+        "max": 0.0024528840750602295
+      }
+    },
+    "R_tau_CG_NLR_identical": true
+  },
+  "quadrature": {
+    "element_order": 10,
+    "face_order": 32,
+    "source_order": 20,
+    "line_order": 12
+  }
+}

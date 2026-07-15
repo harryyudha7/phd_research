@@ -1,0 +1,112 @@
+{
+  "family": "R1",
+  "ref": 6,
+  "h": 0.015625,
+  "production_baseline_L2_vs_exact": 0.030998360809794526,
+  "probe_1_exact_lambda_qp_L2_vs_exact": 0.04636116559228252,
+  "probe_2_exact_target_fit_L2_vs_exact": 0.030305478673548897,
+  "probe_3_gamma_adjacent_order20_L2_vs_exact": 0.030998403976251563,
+  "probe_1_change_from_baseline": 0.015362804782487992,
+  "probe_2_change_from_baseline": -0.0006928821362456282,
+  "probe_3_change_from_baseline": 4.316645703730804e-08,
+  "quadrature": {
+    "baseline_order": 10,
+    "gamma_adjacent_probe_order": 20,
+    "baseline_points": 2457600,
+    "mixed_points": 2572800
+  },
+  "exact_target_training": {
+    "source": "trained",
+    "final_normalized_loss": 0.0002528714714845412,
+    "checkpoint": "/home/muchamad/PhD/fenicsx/code/fracture problem/fracture_mms_pinn_paper_runs/checkpoints/R1_ref6_exact_target_probe.pt",
+    "target_mode": "exact"
+  },
+  "production_final_normalized_loss": 0.0013813425905624811,
+  "probe_5_exact_target_no_pointwise_L2_vs_exact": 0.03128607594538761,
+  "probe_5_change_from_exact_target_with_pointwise": 0.0009805972718387145,
+  "probe_5_change_from_production_baseline": 0.00028771513559308626,
+  "probe_5_exact_face_normalized_objective": 0.0001315979471072868,
+  "probe_5_training": {
+    "source": "trained",
+    "final_normalized_loss": 0.00013159794710728684,
+    "checkpoint": "/home/muchamad/PhD/fenicsx/code/fracture problem/fracture_mms_pinn_paper_runs/checkpoints/R1_ref6_exact_target_no_pointwise_probe.pt",
+    "target_mode": "exact",
+    "potential_weight": 0.0,
+    "pointwise_weight": 0.0,
+    "collocation_points": 0,
+    "face_pieces": 25088,
+    "adam_steps": 2000,
+    "lbfgs_steps": 500
+  },
+  "training_objective": "integrated_dual_face_flux_only",
+  "faceonly_production_L2_vs_exact": 0.03129632140185585,
+  "probe_4_error_map": {
+    "figure": "/home/muchamad/PhD/fenicsx/code/fracture problem/fracture_mms_pinn_paper_runs/fig_frac_R1_ref6_faceonly_error_map.png",
+    "grid": [
+      360,
+      360
+    ],
+    "grid_offsets": [
+      0.371,
+      0.613
+    ],
+    "region_width": 0.03125,
+    "global": {
+      "n": 129600,
+      "mean": 0.02672661866805004,
+      "median": 0.024093532506696557,
+      "p95": 0.05570241638877052,
+      "max": 0.20520722088107432
+    },
+    "near_gamma": {
+      "n": 11264,
+      "mean": 0.02653311382047342,
+      "median": 0.024493271790432182,
+      "p95": 0.052569408504939866,
+      "max": 0.16073584070169106
+    },
+    "near_corners": {
+      "n": 394,
+      "mean": 0.06684828546621491,
+      "median": 0.05657874495669015,
+      "p95": 0.1401246968967584,
+      "max": 0.20520722088107432
+    },
+    "bulk_excluding_bands": {
+      "n": 118138,
+      "mean": 0.026648465879891316,
+      "median": 0.024023046270411266,
+      "p95": 0.05592268886583896,
+      "max": 0.1704981988434919
+    }
+  },
+  "probe_6_large_faceonly": {
+    "L2_vs_exact": 0.04953807264361314,
+    "small_L2_vs_exact": 0.03129632140185585,
+    "large_minus_small": 0.01824175124175729,
+    "large_over_small": 1.5828720573107218,
+    "final_normalized_loss": 0.0007397247416174716,
+    "CG_face_normalized_objective": 0.0007397247416174715,
+    "fit_face_L2_vs_CG": 0.0427720666518273,
+    "fit_face_RMSE_vs_CG": 0.0002700394497756256,
+    "fit_face_max_vs_CG": 0.0021827172632098227,
+    "source": "trained",
+    "checkpoint": "/home/muchamad/PhD/fenicsx/code/fracture problem/fracture_mms_pinn_paper_runs/checkpoints/R1_ref6_large_faceonly_probe.pt",
+    "width": 96,
+    "depth": 3,
+    "frequencies": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "target_mode": "cg",
+    "particular_lambda_mode": "h",
+    "face_weight": 1.0,
+    "potential_weight": 0.0,
+    "pointwise_weight": 0.0,
+    "analysis_sentence": "Larger capacity fits the face data slightly worse and the exact solution substantially worse.",
+    "lambda_h_RHS_worst_max_R_xi": 4.566659550508945e-16
+  }
+}

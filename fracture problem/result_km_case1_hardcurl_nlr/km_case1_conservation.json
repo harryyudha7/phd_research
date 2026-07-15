@@ -1,0 +1,591 @@
+{
+  "case": "Koppel-Martin Case 1, sealed fracture tips",
+  "matrix_primal_grid": "64x64 Q1 rectangles",
+  "transport_cv_grid": "65x65 vertex-centred median dual",
+  "audit_formula": "closed-boundary flux - integral_CV(f_m) - integral_(Gamma intersect CV)(lambda_h)",
+  "gates": {
+    "mrst_dual_geometry": {
+      "passed": true,
+      "max_line_error": 0.0,
+      "union_shapes": {
+        "interior": [
+          2,
+          2
+        ],
+        "edge": [
+          1,
+          2
+        ],
+        "corner": [
+          1,
+          1
+        ]
+      }
+    },
+    "sealed_tip_exchange": {
+      "passed": true,
+      "integral": -3.406019910556779e-11,
+      "tolerance": 2.5612129005677737e-10
+    },
+    "A0_generic": {
+      "normal_jump": 1.6999999989177466,
+      "tangential_jump": 0.0,
+      "relative_error": 6.366196458884588e-10,
+      "passed": true
+    },
+    "A0_boundary_tip_geometry": {
+      "passed": true,
+      "tolerance": 2e-06,
+      "rows": [
+        {
+          "s": 0.0155282498435,
+          "density": 9.724884457076453,
+          "sequence": [
+            {
+              "eps": 1e-05,
+              "jump": 9.721679553876074,
+              "relative_error": 0.00032955694378935277
+            },
+            {
+              "eps": 1e-06,
+              "jump": 9.724563966713632,
+              "relative_error": 3.295569877826997e-05
+            },
+            {
+              "eps": 1e-07,
+              "jump": 9.724852408040121,
+              "relative_error": 3.2955698829049718e-06
+            },
+            {
+              "eps": 1e-08,
+              "jump": 9.724881252172812,
+              "relative_error": 3.2955698902114107e-07
+            }
+          ],
+          "final_relative_error": 3.2955698902114107e-07
+        },
+        {
+          "s": 0.5745452442185,
+          "density": -0.0899964090854532,
+          "sequence": [
+            {
+              "eps": 1e-05,
+              "jump": -0.0899930082082966,
+              "relative_error": 3.400877156597981e-06
+            },
+            {
+              "eps": 1e-06,
+              "jump": -0.08999606899770121,
+              "relative_error": 3.4008775198768326e-07
+            },
+            {
+              "eps": 1e-07,
+              "jump": -0.08999637507667804,
+              "relative_error": 3.400877515713496e-08
+            },
+            {
+              "eps": 1e-08,
+              "jump": -0.08999640568457604,
+              "relative_error": 3.400877163217686e-09
+            }
+          ],
+          "final_relative_error": 3.400877163217686e-09
+        },
+        {
+          "s": 1.1025057389059474,
+          "density": -9.724884457151289,
+          "sequence": [
+            {
+              "eps": 1e-05,
+              "jump": -9.721679553950977,
+              "relative_error": 0.0003295569437798756
+            },
+            {
+              "eps": 1e-06,
+              "jump": -9.724563966788477,
+              "relative_error": 3.295569877710306e-05
+            },
+            {
+              "eps": 1e-07,
+              "jump": -9.724852408114964,
+              "relative_error": 3.2955698821489673e-06
+            },
+            {
+              "eps": 1e-08,
+              "jump": -9.724881252247659,
+              "relative_error": 3.295569879226392e-07
+            }
+          ],
+          "final_relative_error": 3.295569879226392e-07
+        }
+      ]
+    },
+    "A1": {
+      "passed": true,
+      "errors": {
+        "lambda_h/psi=0": {
+          "interior-away": 2.233456475320139e-17,
+          "fracture-cut": 2.7755575615628914e-17,
+          "fracture-adjacent": null,
+          "boundary": 3.469446951953614e-17,
+          "source": null
+        },
+        "lambda_h/random psi": {
+          "interior-away": 2.42861286636753e-17,
+          "fracture-cut": 4.163336342344337e-17,
+          "fracture-adjacent": null,
+          "boundary": 3.469446951953614e-17,
+          "source": null
+        }
+      }
+    },
+    "hard_streamline_boundary": {
+      "passed": true,
+      "tolerance": 2e-12,
+      "native_face_max_abs_flux": 4.0961158076502358e-16,
+      "dense_subsegment_max_abs_flux": 4.2500725161431774e-16,
+      "excluded_face_loss_pieces": 256,
+      "left_right_boundaries_constrained": false
+    },
+    "NLR": {
+      "interior-away": {
+        "status": "gated",
+        "passed": true,
+        "tolerance": 1e-12,
+        "max": 2.3589463715723014e-13
+      },
+      "fracture-cut": {
+        "status": "gated",
+        "passed": true,
+        "tolerance": 1e-11,
+        "max": 1.8971491044794675e-12
+      },
+      "fracture-adjacent": {
+        "status": "N/A",
+        "passed": true,
+        "tolerance": null
+      },
+      "boundary": {
+        "status": "reported separately; ungated",
+        "passed": true,
+        "tolerance": null,
+        "max": 0.014775828329132282
+      }
+    },
+    "MRST_updated_dual_coincidence": {
+      "available": true,
+      "passed": true,
+      "cg_dual_cells": 4225,
+      "mrst_dual_cells": 4225,
+      "cg_dual_faces": 8580,
+      "mrst_dual_faces": 8580,
+      "face_use_min": 1,
+      "face_use_max": 1,
+      "max_face_length_error": 0.0,
+      "max_unit_normal_error": 0.0,
+      "topology_mismatch_count": 0,
+      "max_oriented_MRST_flux_error": 0.0
+    },
+    "fracture_two_point_transport": {
+      "passed": true,
+      "tolerance": 1e-10,
+      "max_abs": 3.5448180848995925e-12,
+      "mean_abs": 1.2915091761550302e-12,
+      "formula": "Q_face[j+1]-Q_face[j]+integral_Ij(lambda_h)"
+    }
+  },
+  "R_xi": {
+    "CG": {
+      "interior-away": {
+        "n": 3874,
+        "mean_abs": 3.915149159025419e-05,
+        "max": 0.008981376516394877
+      },
+      "fracture-cut": {
+        "n": 95,
+        "mean_abs": 0.0015894328359666455,
+        "max": 0.012048361817080813
+      },
+      "fracture-adjacent": {
+        "n": 0,
+        "mean_abs": null,
+        "max": null
+      },
+      "boundary": {
+        "n": 256,
+        "mean_abs": 0.0007223991083654773,
+        "max": 0.03153152863676251
+      }
+    },
+    "NLR": {
+      "interior-away": {
+        "n": 3874,
+        "mean_abs": 1.206343111527167e-15,
+        "max": 2.3589463715723014e-13
+      },
+      "fracture-cut": {
+        "n": 95,
+        "mean_abs": 7.600228012728002e-14,
+        "max": 1.8971491044794675e-12
+      },
+      "fracture-adjacent": {
+        "n": 0,
+        "mean_abs": null,
+        "max": null
+      },
+      "boundary": {
+        "n": 256,
+        "mean_abs": 0.0005238747091902006,
+        "max": 0.014775828329132282
+      }
+    },
+    "PINN": {
+      "interior-away": {
+        "n": 3874,
+        "mean_abs": 3.536656851727077e-18,
+        "max": 2.7755575615628914e-17
+      },
+      "fracture-cut": {
+        "n": 95,
+        "mean_abs": 5.067218574563831e-18,
+        "max": 2.7755575615628914e-17
+      },
+      "fracture-adjacent": {
+        "n": 0,
+        "mean_abs": null,
+        "max": null
+      },
+      "boundary": {
+        "n": 256,
+        "mean_abs": 3.3325981914128413e-18,
+        "max": 3.469446951953614e-17
+      }
+    }
+  },
+  "R_zeta": {
+    "CG": {
+      "all": {
+        "n": 4278,
+        "mean_abs": 0.0004129013157579011,
+        "max": 0.08764840679424545
+      },
+      "fracture-cut": {
+        "n": 91,
+        "mean_abs": 0.008960860293846276,
+        "max": 0.08764840679424545
+      }
+    },
+    "NLR": {
+      "all": {
+        "n": 4278,
+        "mean_abs": 0.000426270841147817,
+        "max": 0.07809287712039499
+      },
+      "fracture-cut": {
+        "n": 91,
+        "mean_abs": 0.01119377149662587,
+        "max": 0.07809287712039499
+      }
+    },
+    "PINN": {
+      "all": {
+        "n": 4278,
+        "mean_abs": 4.956436060561422e-18,
+        "max": 4.996003610813204e-16
+      },
+      "fracture-cut": {
+        "n": 91,
+        "mean_abs": 5.996472015515982e-18,
+        "max": 2.0816681711721685e-17
+      }
+    }
+  },
+  "R_tau_PINN_native": {
+    "lambda_h_RHS": {
+      "n": 4096,
+      "max": 6.616582282070738e-13,
+      "rmse": 1.601305122787514e-14,
+      "mean_abs": 5.754674081009936e-16
+    },
+    "formula": "native closed element-boundary flux - integral_cell(f_m) - integral_(Gamma intersect cell)(lambda_h)"
+  },
+  "PINN_training": {
+    "wall_time_s": 213.14888649199565,
+    "final_loss": 0.000792877503860379,
+    "final_grad_l2": 0.0006139625632789067,
+    "final_grad_inf": 0.00017441706549854133,
+    "iterations": 3000,
+    "stop_reason": "max_iterations",
+    "loss": "integrated dual-face CG data plus fixed-grid pointwise CG data",
+    "excluded_horizontal_boundary_face_pieces": 256,
+    "hard_streamline_boundary": true
+  },
+  "MRST_aggregation": {
+    "passed": true,
+    "mrst_grid": [
+      128,
+      128
+    ],
+    "dual_grid": [
+      65,
+      65
+    ],
+    "matrix_cells_assigned_once": 16384,
+    "max_union_area_error": 0.0,
+    "union_count_histogram": {
+      "1": 4,
+      "2": 252,
+      "4": 3969
+    },
+    "nnc_connections": 252,
+    "nnc_resolution": "per matrix cell (direct nnc_mat_cell mapping)"
+  },
+  "MRST_validation": {
+    "pressure_LCG_minus_MRST": {
+      "n": 16384,
+      "mean_abs": 0.002725355638263517,
+      "rmse": 0.004045344625460138,
+      "max_abs": 0.03312478079096515,
+      "relative_rmse": 0.0015352408040719425
+    },
+    "dual_face_PINN_minus_aggregated_MRST": {
+      "n": 8704,
+      "mean_abs": 0.00020261267386942922,
+      "rmse": 0.0007288663810453682,
+      "max_abs": 0.01938858538989404,
+      "relative_rmse": 0.04096626897271367
+    }
+  },
+  "transport": {
+    "cv_family": "65x65 vertex-centred median dual",
+    "mrst_aggregation": "exact summation of 128x128 matrix faces/cells; NNC exchange mapped directly by per-matrix-cell nnc_mat_cell",
+    "time_grid": "every step of one shared fixed CFL dt",
+    "shared_dt": 3.7405963578278574e-05,
+    "shared_dt_CFL_upper_bound": 0.00015011371373413508,
+    "time_quantum": 0.028877403882431058,
+    "temporal_refinement_below_CFL": 4,
+    "steps_per_time_quantum": 772,
+    "CFL": 0.45,
+    "FPRIME_MAX": 2.0,
+    "global_max_dual_face_speed": 9.154396838110005,
+    "CFL_binding_track": "PINN",
+    "CFL_by_track": {
+      "CG": {
+        "dt_matrix_raw": 0.0003421267513359054,
+        "dt_fracture_raw": 0.0030305982410739917,
+        "max_dual_face_speed": 9.112803430863877,
+        "dt_raw": 0.0003421267513359054
+      },
+      "NLR": {
+        "dt_matrix_raw": 0.0003529238986614839,
+        "dt_fracture_raw": 0.0030305982410739917,
+        "max_dual_face_speed": 9.059623485164469,
+        "dt_raw": 0.0003529238986614839
+      },
+      "PINN": {
+        "dt_matrix_raw": 0.0003335860305203002,
+        "dt_fracture_raw": 0.0030305982410739917,
+        "max_dual_face_speed": 9.154396838110005,
+        "dt_raw": 0.0003335860305203002
+      },
+      "MRST": {
+        "dt_matrix_raw": 0.00042771155836855354,
+        "dt_fracture_raw": 0.0035039201888608937,
+        "max_dual_face_speed": 8.264733166910958,
+        "dt_raw": 0.00042771155836855354
+      }
+    },
+    "requested_snapshot_PVI": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "requested_snapshot_times_abs": [
+      0.08663221164729316,
+      0.1443870194121553,
+      0.2021418271770174
+    ],
+    "snapshot_steps": [
+      2316,
+      3860,
+      5404
+    ],
+    "snapshot_times_actual": [
+      0.08663221164729318,
+      0.1443870194121553,
+      0.20214182717701742
+    ],
+    "final_time": 0.2021418271770174,
+    "final_step": 5404,
+    "breakthrough_rule": "diagnostic only: first shared step at which any track has maximum left-boundary dual-CV saturation above 1e-3; transport continues through every requested snapshot",
+    "threshold": 0.001,
+    "first_failed_step": null,
+    "binding_breakthrough_track": null,
+    "full_right_boundary_injection": true,
+    "right_boundary_face_records": {
+      "CG": 128,
+      "NLR": 128,
+      "PINN": 128,
+      "MRST": 128
+    },
+    "saturation_difference_color_limit": {
+      "by_snapshot": {
+        "0.09": 0.04891255564664029,
+        "0.14": 0.12331804456786508,
+        "0.20": 0.24268614881402809
+      },
+      "policy": "one nonnegative 99.5th-percentile absolute-error limit per time, shared by CG/NLR/PINN; larger values saturate"
+    },
+    "dt_halving_validation": {
+      "passed": true,
+      "track": "PINN",
+      "snapshot_time": 0.08663221164729316,
+      "dt": 3.7405963578278574e-05,
+      "dt_half": 1.8702981789139287e-05,
+      "saturation_rmse": 0.00017962896101695263,
+      "saturation_max_abs": 0.001600766495701872,
+      "between_track_rmse_at_same_time": {
+        "CG": 0.012212615946523243,
+        "NLR": 0.014702374243426944,
+        "MRST": 0.005354136947838639
+      },
+      "ratio_to_smallest_between_track_rmse": 0.033549564153278776,
+      "acceptance": "dt/2 RMSE <= 15% of the smallest PINN-to-other-track RMSE"
+    },
+    "MRST_native_snapshot_validation": {
+      "passed": true,
+      "source": "case3_mrst_export_noflow_v2.mat",
+      "native_grid": "direct 65x65 MRST dual transport",
+      "comparison_grid": "65x65 vertex-centred dual",
+      "aggregated_track_time_step": 3.7405963578278574e-05,
+      "snapshot_count": 10,
+      "max_snapshot_rmse": 0.003910401206077969,
+      "acceptance": "max saturation RMSE <= 0.12 (grid-family comparison gate)",
+      "rows": [
+        {
+          "time": 0.028877403882431058,
+          "rmse": 0.003910401206077969,
+          "mean_abs": 0.00107290815384122,
+          "max_abs": 0.05313536576195518,
+          "relative_rmse": 0.013793275792610972,
+          "mean_saturation_aggregated_track": 0.10000000000000182,
+          "mean_saturation_native_aggregated": 0.1
+        },
+        {
+          "time": 0.057754807764862116,
+          "rmse": 0.003405841040805892,
+          "mean_abs": 0.0010864193459982807,
+          "max_abs": 0.03309161766608687,
+          "relative_rmse": 0.008633536972497047,
+          "mean_saturation_aggregated_track": 0.19212776448890442,
+          "mean_saturation_native_aggregated": 0.19223378672278496
+        },
+        {
+          "time": 0.08663221164729316,
+          "rmse": 0.003105610852629167,
+          "mean_abs": 0.0010551645368232483,
+          "max_abs": 0.02832813035827275,
+          "relative_rmse": 0.006630854771093981,
+          "mean_saturation_aggregated_track": 0.26859836667355874,
+          "mean_saturation_native_aggregated": 0.2687103189759987
+        },
+        {
+          "time": 0.11550961552972423,
+          "rmse": 0.0030255821760314322,
+          "mean_abs": 0.0010367810110880967,
+          "max_abs": 0.0258828663948778,
+          "relative_rmse": 0.005749824773091586,
+          "mean_saturation_aggregated_track": 0.337389111411642,
+          "mean_saturation_native_aggregated": 0.3374931913362463
+        },
+        {
+          "time": 0.1443870194121553,
+          "rmse": 0.003005449469984856,
+          "mean_abs": 0.0010368825611426812,
+          "max_abs": 0.024972541398550763,
+          "relative_rmse": 0.005229090931434979,
+          "mean_saturation_aggregated_track": 0.40180798102497917,
+          "mean_saturation_native_aggregated": 0.4018988190328233
+        },
+        {
+          "time": 0.17326442329458633,
+          "rmse": 0.0029940213282579208,
+          "mean_abs": 0.0010346806293383337,
+          "max_abs": 0.02848379149566682,
+          "relative_rmse": 0.004851230479980163,
+          "mean_saturation_aggregated_track": 0.4637728266508483,
+          "mean_saturation_native_aggregated": 0.46385191368521417
+        },
+        {
+          "time": 0.2021418271770174,
+          "rmse": 0.003021673764216309,
+          "mean_abs": 0.0010339562067064256,
+          "max_abs": 0.031243536917414577,
+          "relative_rmse": 0.004613236100265944,
+          "mean_saturation_aggregated_track": 0.5242289293195406,
+          "mean_saturation_native_aggregated": 0.5242959093471613
+        },
+        {
+          "time": 0.23101923105944847,
+          "rmse": 0.003043142651287775,
+          "mean_abs": 0.0010256349967331059,
+          "max_abs": 0.033352046817932635,
+          "relative_rmse": 0.004414730569078086,
+          "mean_saturation_aggregated_track": 0.5839771076803264,
+          "mean_saturation_native_aggregated": 0.5840313968157889
+        },
+        {
+          "time": 0.25989663494187953,
+          "rmse": 0.0030698276179335115,
+          "mean_abs": 0.0010139904952297773,
+          "max_abs": 0.0345738190588816,
+          "relative_rmse": 0.004258743145686366,
+          "mean_saturation_aggregated_track": 0.6434903178597113,
+          "mean_saturation_native_aggregated": 0.6435339925924339
+        },
+        {
+          "time": 0.2887740388243106,
+          "rmse": 0.0036307259106720608,
+          "mean_abs": 0.0010555648295622051,
+          "max_abs": 0.04081116544837138,
+          "relative_rmse": 0.004840077097660677,
+          "mean_saturation_aggregated_track": 0.7029711962237039,
+          "mean_saturation_native_aggregated": 0.7030189669582154
+        }
+      ]
+    },
+    "horizontal_boundary_flux": {
+      "CG": {
+        "n": 256,
+        "mean_abs": 0.0005698709508730848,
+        "max_abs": 0.012337942842025724,
+        "net": 2.439159985101469e-13
+      },
+      "NLR": {
+        "n": 256,
+        "mean_abs": 0.0005562067553249376,
+        "max_abs": 0.011531460146633357,
+        "net": 2.4272250875867485e-13
+      },
+      "PINN": {
+        "n": 256,
+        "mean_abs": 9.194780870461845e-17,
+        "max_abs": 4.0961158076502358e-16,
+        "net": 7.162849415161265e-17
+      },
+      "MRST": {
+        "n": 256,
+        "mean_abs": 0.0,
+        "max_abs": 0.0,
+        "net": 0.0
+      }
+    },
+    "method_boundary_conditions": {
+      "PINN": "exact top/bottom no-flow by prescribed streamline trace",
+      "CG": "weak natural no-flow boundary condition",
+      "NLR": "inherits/reconstructs CG data without a hard boundary trace",
+      "MRST": "native finite-volume no-flow boundary",
+      "left_right": "unconstrained flux for every reconstruction; pressure Dirichlet"
+    }
+  }
+}

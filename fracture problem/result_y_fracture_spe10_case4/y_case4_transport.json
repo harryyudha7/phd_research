@@ -1,0 +1,155 @@
+{
+  "events": {
+    "first_y_step": 596,
+    "earliest_breakthrough_step": 17475,
+    "breakthrough_step": {
+      "CG": 19447,
+      "NLR": 17475,
+      "PINN": 17584
+    },
+    "half_rise_step": {
+      "CG": null,
+      "NLR": null,
+      "PINN": null
+    },
+    "dynamic_max_steps": 87375,
+    "stop_reason": "manual_stop_unbalanced_well_watercut_ceiling",
+    "stop_note": "Original all-tracks water-cut >= 0.5 criterion is unattainable for the inherited unbalanced wells: injection rate +1, producer rate -5, theoretical ceiling about q_inj/|q_prod| = 0.2.",
+    "watercut_ceiling_estimate": 0.2,
+    "final_step": 64700,
+    "final_time": 1.3941517159443553,
+    "breakthrough_time": {
+      "CG": 0.419042788562131,
+      "NLR": 0.3765502509447853,
+      "PINN": 0.37889897640132214
+    },
+    "half_rise_time": {
+      "CG": null,
+      "NLR": null,
+      "PINN": null
+    },
+    "tracks_below_half_at_stop": [
+      "CG",
+      "NLR",
+      "PINN"
+    ],
+    "posthoc_watercut_milestones": {
+      "definition": "plateau = mean over final 20% of logged water-cut values; t90 = first logged time at 90% of that plateau",
+      "plateau_window_fraction": 0.2,
+      "plateau_window_n_logged": 1295,
+      "CG": {
+        "plateau_value": 0.13732223416395783,
+        "t90_plateau_level": 0.12359001074756205,
+        "t90_step": 41590,
+        "t90_time": 0.8961788232786048,
+        "final_logged_watercut": 0.14032135602406648
+      },
+      "NLR": {
+        "plateau_value": 0.1700027652713809,
+        "t90_plateau_level": 0.1530024887442428,
+        "t90_step": 41050,
+        "t90_time": 0.8845429356957617,
+        "final_logged_watercut": 0.17308635060545868
+      },
+      "PINN": {
+        "plateau_value": 0.16993285006453934,
+        "t90_plateau_level": 0.15293956505808542,
+        "t90_step": 40900,
+        "t90_time": 0.8813107447005275,
+        "final_logged_watercut": 0.17288701614847932
+      }
+    }
+  },
+  "dt": 2.1547939968228055e-05,
+  "dt_candidates": {
+    "CG": 2.1598853828576874e-05,
+    "NLR": 2.1547939968228055e-05,
+    "PINN": 2.166703464907606e-05
+  },
+  "CFL_safety": 0.45,
+  "BT_level": 0.001,
+  "half_rise_level": 0.5,
+  "snapshot_times": {
+    "first_y": 0.01284257222106392,
+    "earliest_breakthrough": 0.3765502509447853,
+    "stop": 1.3941517159443553
+  },
+  "timing_development_run": {
+    "CG": {
+      "solve": {
+        "mean": 0.05363318214215973,
+        "median": 0.05246432049898431,
+        "p95": 0.06534423088451148,
+        "n": 64700
+      },
+      "flux": {
+        "mean": 0.008998035710759121,
+        "median": 0.008814653498120606,
+        "p95": 0.011934593408659567,
+        "n": 64700
+      },
+      "transport": {
+        "mean": 0.011667037867311474,
+        "median": 0.01159023999935016,
+        "p95": 0.015037062297051306,
+        "n": 64700
+      }
+    },
+    "NLR": {
+      "solve": {
+        "mean": 0.053567096934429986,
+        "median": 0.052419421495869756,
+        "p95": 0.06510340171080316,
+        "n": 64700
+      },
+      "flux": {
+        "mean": 0.05660046709495848,
+        "median": 0.0560771599994041,
+        "p95": 0.0668511094409041,
+        "n": 64700
+      },
+      "transport": {
+        "mean": 0.011716551660806847,
+        "median": 0.011619461511145346,
+        "p95": 0.015139884415839333,
+        "n": 64700
+      }
+    },
+    "PINN": {
+      "solve": {
+        "mean": 0.053648852175141676,
+        "median": 0.052492105489363894,
+        "p95": 0.06529078003950417,
+        "n": 64700
+      },
+      "flux": {
+        "mean": 0.017925614316532477,
+        "median": 0.017720129500958137,
+        "p95": 0.021883783108205532,
+        "n": 64700
+      },
+      "transport": {
+        "mean": 0.011738641439953968,
+        "median": 0.01166887700674124,
+        "p95": 0.01512931473989738,
+        "n": 64700
+      }
+    }
+  },
+  "one_time": {
+    "PINN_training_s": 322.4928743460041,
+    "PoU_build_s": 0.6758465589955449,
+    "PoU_factor_s": 0.5967475590005051,
+    "NLR_geometry_s": 2.597128301014891,
+    "dynamic_geometry_s": 0.7082577749970369
+  },
+  "machine": {
+    "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "single_threaded_timing_pending": false
+  },
+  "outputs": {
+    "npz": "/home/muchamad/PhD/fenicsx/code/fracture problem/result_y_fracture_spe10_case4/y_case4_transport.npz",
+    "timing_json": "/home/muchamad/PhD/fenicsx/code/fracture problem/result_y_fracture_spe10_case4/y_case4_timing.json"
+  }
+}

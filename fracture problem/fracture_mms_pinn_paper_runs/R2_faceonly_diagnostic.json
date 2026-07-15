@@ -1,0 +1,12 @@
+{
+  "role": "diagnostic/ablation material; not the Beat-3 figure",
+  "figure": "/home/muchamad/PhD/fenicsx/code/fracture problem/fracture_mms_pinn_paper_runs/fig_frac_R2_faceonly_diagnostic.png",
+  "face_only": {
+    "3": 0.10650650942287572,
+    "4": 0.03296239760084356,
+    "5": 0.03232890804647086,
+    "6": 0.031188766265047036,
+    "7": 0.031632534502854893
+  },
+  "coarse_mesh_observation": "R2 face-only is not catastrophic at ref=3 (about 0.107), unlike R1 face-only (about 12.0); coarse face-only instability is k-dependent."
+}

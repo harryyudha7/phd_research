@@ -1,0 +1,9 @@
+{
+  "mesh": "conforming_tri",
+  "A_flux_error": 0.00018267262653820182,
+  "B_flux_error": 0.005002770266940977,
+  "A_worst_Rxi": 8.881784197001252e-16,
+  "B_worst_Rxi": 0.0005843143210554173,
+  "A_jump_error": 0.0,
+  "B_jump_error": 0.04088684741401759
+}

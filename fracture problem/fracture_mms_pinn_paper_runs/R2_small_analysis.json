@@ -1,0 +1,159 @@
+{
+  "metric": "flux_L2_vs_exact",
+  "cap_order": 2.0,
+  "threshold": 1.0,
+  "pairwise_local_slopes": [
+    {
+      "ref_left": 3,
+      "ref_right": 4,
+      "h_left": 0.125,
+      "h_right": 0.0625,
+      "slope": 0.19301121082071623
+    },
+    {
+      "ref_left": 4,
+      "ref_right": 5,
+      "h_left": 0.0625,
+      "h_right": 0.03125,
+      "slope": -0.03185053527784248
+    },
+    {
+      "ref_left": 5,
+      "ref_right": 6,
+      "h_left": 0.03125,
+      "h_right": 0.015625,
+      "slope": 0.08279790608362461
+    },
+    {
+      "ref_left": 6,
+      "ref_right": 7,
+      "h_left": 0.015625,
+      "h_right": 0.0078125,
+      "slope": -0.03505682559967457
+    }
+  ],
+  "plateau_detected": true,
+  "fit_refs": [
+    3
+  ],
+  "fit_h": [
+    0.125
+  ],
+  "pre_plateau_slope": null,
+  "plateau_refs": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "plateau_level": 0.030407756758291958,
+  "capacity_confirmation": {
+    "fit_metric": "fit_face_L2_vs_CG",
+    "factor_threshold": 3.0,
+    "fit_residual_plateau_level": 0.018020856924412385,
+    "vs_exact_plateau_level": 0.030407756758291958,
+    "fit_to_exact_ratio": 0.5926401302029042,
+    "comparable_within_factor": true,
+    "fit_metric_pairwise_local_slopes": [
+      {
+        "ref_left": 3,
+        "ref_right": 4,
+        "h_left": 0.125,
+        "h_right": 0.0625,
+        "slope": 0.6294618294335314
+      },
+      {
+        "ref_left": 4,
+        "ref_right": 5,
+        "h_left": 0.0625,
+        "h_right": 0.03125,
+        "slope": 0.0764062600725514
+      },
+      {
+        "ref_left": 5,
+        "ref_right": 6,
+        "h_left": 0.03125,
+        "h_right": 0.015625,
+        "slope": 0.1328252096539537
+      },
+      {
+        "ref_left": 6,
+        "ref_right": 7,
+        "h_left": 0.015625,
+        "h_right": 0.0078125,
+        "slope": -0.007416010778009054
+      }
+    ],
+    "fit_metric_tail_pairs": [
+      {
+        "ref_left": 3,
+        "ref_right": 4,
+        "h_left": 0.125,
+        "h_right": 0.0625,
+        "slope": 0.6294618294335314
+      },
+      {
+        "ref_left": 4,
+        "ref_right": 5,
+        "h_left": 0.0625,
+        "h_right": 0.03125,
+        "slope": 0.0764062600725514
+      },
+      {
+        "ref_left": 5,
+        "ref_right": 6,
+        "h_left": 0.03125,
+        "h_right": 0.015625,
+        "slope": 0.1328252096539537
+      },
+      {
+        "ref_left": 6,
+        "ref_right": 7,
+        "h_left": 0.015625,
+        "h_right": 0.0078125,
+        "slope": -0.007416010778009054
+      }
+    ],
+    "fit_metric_tail_median_slope": 0.10461573486325254,
+    "fit_metric_stalled_below_half_cap": true,
+    "capacity_limited": true
+  },
+  "trigger_decision": "plateau present, capacity-limited",
+  "large_trigger": true,
+  "family": "R2",
+  "capacity": "SMALL",
+  "loss_variant": "face+pointwise",
+  "training_objective": "canonical face+pointwise CG data",
+  "large_execution": "cancelled_by_R1_ref6_probe6",
+  "large_cancellation_reason": "The single w96,+frequency-16 diagnostic increased the exact-field error; no LARGE convergence curves are admissible.",
+  "anchor_checks": {
+    "lambda_finest_order": {
+      "value": 2.0132314819685684,
+      "anchor": 2.01,
+      "tolerance": 0.04,
+      "passed": true
+    },
+    "CG_finest_order": {
+      "value": 2.002987435906029,
+      "anchor": 2.0,
+      "tolerance": 0.04,
+      "passed": true
+    },
+    "NLR_finest_order": {
+      "value": 2.0018474758052553,
+      "anchor": 2.0,
+      "tolerance": 0.04,
+      "passed": true
+    }
+  },
+  "faceonly_diagnostic_comparison": {
+    "R2_faceonly_ref3_L2": 0.10650650942287572,
+    "R2_canonical_ref3_L2": 0.03495197538861365,
+    "R1_faceonly_ref3_L2": 12.00214238594258,
+    "R2_faceonly_ref6_L2": 0.031188766265047036,
+    "R2_canonical_ref6_L2": 0.02951432635084238,
+    "R2_faceonly_ref7_L2": 0.031632534502854893,
+    "R2_canonical_ref7_L2": 0.030240295536522147,
+    "discussion_sentence": "The coarse face-only instability is k-dependent: R2 starts near 1.07e-1 whereas R1 starts near 1.20e1; the two R2 loss variants are compared separately from the Beat-3 figure."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "panels": {
+    "R1": {
+      "sampling": "tagged fracture-facet midpoints",
+      "delta": null,
+      "plotted_CG_jump_summary": {
+        "samples": 64,
+        "nonzero_samples_at_1e-12": 64,
+        "largest_absolute_jump": 2.000971084446049,
+        "largest_jump": -2.000971084446049,
+        "largest_jump_arclength": 0.6960582377305078
+      }
+    },
+    "R3": {
+      "accepted_delta": 2e-06,
+      "checks": [
+        {
+          "delta": 1e-06,
+          "double_delta": 2e-06,
+          "max_jump_change": 4.710277376051325e-16,
+          "tolerance": 1.3149337800082542e-06
+        }
+      ],
+      "trace_convention": "zero on open cut-cell fracture segments; isolated background-mesh-skeleton intersections assigned zero",
+      "corrected_mesh_skeleton_samples": 1,
+      "raw_offset_max_abs_jump": 1.3149337800082541,
+      "raw_offset_nonzero_arclengths": [
+        0.7071067811865476
+      ],
+      "sampling": "independent multiplier-interval midpoints",
+      "plotted_CG_jump_summary": {
+        "samples": 31,
+      "nonzero_samples_at_1e-12": 0,
+      "largest_absolute_jump": 0.0,
+      "largest_jump": 0.0,
+      "largest_jump_arclength": null
+      },
+      "isolated_spike_interpretation": "The physical CG jump is zero on every open cut-cell segment. The raw offset spike occurred at a measure-zero background-mesh skeleton intersection where the broken gradient has no unique point trace; it is assigned the correct representative value zero."
+    }
+  },
+  "line_styles": {
+    "exact": {
+      "color": "#1f77b4",
+      "ls": "-"
+    },
+    "lambda_h": {
+      "color": "#ff7f0e",
+      "ls": "None",
+      "marker": "s"
+    },
+    "cg": {
+      "color": "#2ca02c",
+      "ls": "None",
+      "marker": "^"
+    },
+    "pinn": {
+      "color": "#d62728",
+      "ls": "-."
+    }
+  },
+  "legend": "shared bottom legend, four columns",
+  "vertical_axis": "[[v dot n_Gamma]]",
+  "PINN_jump_max_error_vs_lambda_h": 0.0
+}
